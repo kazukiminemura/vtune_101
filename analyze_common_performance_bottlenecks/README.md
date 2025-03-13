@@ -57,4 +57,5 @@ vtune-gui /opt/intel/oneapi/vtune/latest/samples/en/C++/matrix
 ![image](https://github.com/user-attachments/assets/10ca3975-f64f-46af-bd42-9ec8748cdd0f)
 
 oneAPI Toolkit内に含まれるmatrixのアプリを選択して、青い三角ボタンを押して実行
-![image](https://github.com/user-attachments/assets/29b0b61c-ebea-44ad-a32d-b5fe2da49fd1)
+![image](https://github.com/user-attachments/assets/35fd725f-2109-4e43-a4d2-84365afb834c)
+
