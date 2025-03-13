@@ -45,3 +45,10 @@ matrix アプリケーションのボトルネックを特定します。メモ�
 プラットフォームに適したベクトル化を有効にします。
 
 パフォーマンス向上を確認します。最適化前後の結果を比較します。
+
+
+# コマンド
+```
+source /opt/intel/oneapi/setvars.sh
+vtune-gui /opt/intel/oneapi/vtune/latest/samples/en/C++/matrix
+```
