@@ -14,6 +14,8 @@ Intel® VTune™ Profiler バージョン 2025.0 以降
 データ収集にサンプリングドライバが必要です。
 ```
 sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
+
+sudo echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
 ```
 
 
