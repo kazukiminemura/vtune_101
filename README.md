@@ -12,7 +12,9 @@ Intel® VTune™ Profiler バージョン 2025.0 以降
 注意: このチュートリアルでは、Intel® oneAPI DPC++/C++ コンパイラーを使用して、分析の共通ベースラインを確立し、パフォーマンスの向上を追跡します。別のコンパイラーを選択すると、このワークフローの結果が異なる場合があります。
 
 データ収集にサンプリングドライバが必要です。
-https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2025-0/sep-driver.html
+```
+sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
+```
 
 
 
