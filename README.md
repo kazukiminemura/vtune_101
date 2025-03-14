@@ -32,8 +32,8 @@ libdrm-devパッケージをインストールします。
 ``` $ sudo usermod -a -G video intel ```
 ### システム設定を変更します。
 ```
-$ sudo echo dev.i915.perf_stream_paranoid=0 > /etc/sysctl.d/60-mdapi.conf 
-$ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+$ sudo echo 0 > /proc/sys/kernel/yama/ptrace_scope
+$ sudo echo 0 > /proc/sys/kernel/kptr_restrict
 ```
 
 ### ドライバーの確認
