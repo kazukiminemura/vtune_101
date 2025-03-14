@@ -7,7 +7,7 @@
 - Intel® VTune™ Profiler バージョン 2025.0 以降
 これらのツールは Intel® oneAPI Base Toolkit に含まれています。
 
-## Ubuntu24.04LTS上でのセットアップ手順　****
+## Ubuntu24.04LTS上でのセットアップ手順
 oneAPI Base Toolkitのオフラインインストーラーをダウンロード(https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
 ```
 $ sudo sh ./intel-oneapi-toolkit-2025.0.1.46_offline.sh -a --cli --silent --eula=accept
@@ -47,9 +47,10 @@ sep5 driver is not loaded.
 Warning: skipping SOCWATCH driver, not built
 vtsspp driver is not loaded.
 ```
-### 適切なドライバーを検証します（rootユーザーで実行）。
-
+### VTuneの検証（rootユーザーで実行）
+```
 /opt/intel/oneapi/vtune/latest/bin64/vtune-self-checker.sh
+```
 
 
 ## WSL2上のMeteor Lake-PでUbuntuをセットアップする手順 (機能が制限されています）
