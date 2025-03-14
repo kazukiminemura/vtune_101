@@ -54,6 +54,17 @@ cd /opt/intel/oneapi/vtune/latest/sepdk/src
 ./build-driver
 ./insmod-sep -r -g vtune
 ```
+以下のようになれば成功
+```
+/opt/intel/oneapi/vtune/latest/sepdk/src/insmod-sep -q
+pax driver is loaded and owned by group "vtune" with file permissions "660".
+socperf3 driver is loaded and owned by group "vtune" with file permissions "660".
+sep5 driver is loaded and owned by group "vtune" with file permissions "660".
+
+socwatch2_15 driver is loaded and owned by group "vtune" with file permissions "660".
+
+vtsspp driver is loaded and owned by group "vtune" with file permissions "660".
+```
 
 ### VTuneの検証（rootユーザーで実行）
 ```
