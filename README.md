@@ -27,7 +27,6 @@ libdrm-devパッケージをインストールします。
 #### 権限の有効化
 ビデオグループにユーザーを追加します。
 ``` $ groups | grep video ```
-
 ユーザー名が表示されない場合：
 ``` $ sudo usermod -a -G video intel ```
 ### システム設定を変更します。
@@ -47,6 +46,14 @@ sep5 driver is not loaded.
 Warning: skipping SOCWATCH driver, not built
 vtsspp driver is not loaded.
 ```
+もしドライバーが上記のように見つからない場合
+root-userで以下のステップを実行
+```
+apt install build-essential
+cd /opt/intel/oneapi/vtune/latest/sepdk/src
+./build-driver
+```
+
 ### VTuneの検証（rootユーザーで実行）
 ```
 /opt/intel/oneapi/vtune/latest/bin64/vtune-self-checker.sh
