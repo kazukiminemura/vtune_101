@@ -8,9 +8,7 @@
 これらのツールは Intel® oneAPI Base Toolkit に含まれています。
 
 ## Ubuntu24.04LTS上でのセットアップ手順　****
-Windows機能で「Windows Subsystem for Linux」を有効にし、コンピュータを再起動します。
-WSL2上でUbuntu 24.04.xをセットアップします。
-oneAPI Base Toolkitのオフラインインストーラーをダウンロードします。 oneAPI Base Toolkit ダウンロードページ
+oneAPI Base Toolkitのオフラインインストーラーをダウンロード(https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
 ```
 $ sudo sh ./intel-oneapi-toolkit-2025.0.1.46_offline.sh -a --cli --silent --eula=accept
 ```
