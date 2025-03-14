@@ -29,7 +29,7 @@ libdrm-devパッケージをインストールします。
 ``` $ groups | grep video ```
 ユーザー名が表示されない場合：
 ``` $ sudo usermod -a -G video intel ```
-### システム設定を変更します。
+###　カーネルのアクセス権限を変更
 ```
 $ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 $ sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
