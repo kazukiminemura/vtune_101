@@ -31,7 +31,10 @@ libdrm-devパッケージをインストールします。
 ユーザー名が表示されない場合：
 ``` $ sudo usermod -a -G video intel ```
 ### システム設定を変更します。
-``` $ echo dev.i915.perf_stream_paranoid=0 > /etc/sysctl.d/60-mdapi.conf ```
+```
+$ sudo echo dev.i915.perf_stream_paranoid=0 > /etc/sysctl.d/60-mdapi.conf 
+$ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+```
 
 ### ドライバーの確認
 VTune Profilerのドライバーを確認します。
