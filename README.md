@@ -35,7 +35,7 @@ $ sudo make install
 ```
 
 
-#### 権限の有効化
+# 権限の有効化
 ビデオグループにユーザーを追加します。
 ``` $ groups | grep video ```
 ユーザー名が表示されない場合：
@@ -46,9 +46,13 @@ $ sudo make install
 $ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 $ sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
 ```
+もしi915関係で問題がある場合、カーネルを再ビルドする必要があります。
+[Rebuild and Install the Kernel for GPU Analysis](https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2025-0/rebuild-and-install-the-kernel-for-gpu-analysis.html)
+
 
 ### ドライバーの確認
 VTune Profilerのドライバーを確認します。
+
 
 ```
 /opt/intel/oneapi/vtune/latest/sepdk/src/insmod-sep -q
