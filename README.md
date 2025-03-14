@@ -31,6 +31,7 @@ libdrm-devパッケージをインストールします。
 ``` $ sudo usermod -a -G video intel ```
 ###　カーネルのアクセス権限を変更
 ```
+# sudo echo 0 | sudo tee /proc/sys/dev/i915/perf_stream_paranoid
 $ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 $ sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
 ```
