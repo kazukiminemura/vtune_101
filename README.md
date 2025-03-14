@@ -1,6 +1,6 @@
 # vtune_101
 
-# 前提条件
+## 前提条件
 以下の Intel ソフトウェアツールを Linux システムにダウンロードしてください:
 
 Intel® oneAPI DPC++/C++ コンパイラー
@@ -18,7 +18,49 @@ sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
 sudo echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
 ```
 
+## WSL2上のMeteor Lake-PでUbuntuをセットアップする手順
+Windows機能で「Windows Subsystem for Linux」を有効にし、コンピュータを再起動します。
+WSL2上でUbuntu 24.04.xをセットアップします。
+oneAPI Base Toolkitのオフラインインストーラーをダウンロードします。 oneAPI Base Toolkit ダウンロードページ
+```
+$ sudo sh ./intel-oneapi-toolkit-2025.0.1.46_offline.sh -a --cli --silent --eula=accept
+```
+### Intel GPUのセットアップ
+Intel GPUドライバーをインストールします。 Intel GPUドライバーインストールガイド
+手順に従った後、sycl-lsコマンドでGPUデバイスのリストを表示します。
+```
+$ sycl-ls
+[level_zero:gpu][level_zero:0] Intel(R) oneAPI Unified Runtime over Level-Zero, Intel(R) Graphics [0x7d55] 12.71.4 [1.6.32224+14]
+[opencl:cpu][opencl:0] Intel(R) OpenCL, Intel(R) Core(TM) Ultra 7 155H OpenCL 3.0 (Build 0) [2024.18.12.0.05_160000]
+[opencl:gpu][opencl:1] Intel(R) OpenCL Graphics, Intel(R) Graphics [0x7d55] OpenCL 3.0 NEO  [24.52.32224]
+```
+### Intel Metrics Discovery APIライブラリのインストール
+libdrm-devパッケージをインストールします。
+``` $ sudo apt install libdrm-dev ```
+#### 権限の有効化
+ビデオグループにユーザーを追加します。
+``` $ groups | grep video ```
+```
+ユーザー名が表示されない場合：
+$ sudo usermod -a -G video intel
+```
+### システム設定を変更します。
+$ echo dev.i915.perf_stream_paranoid=0 > /etc/sysctl.d/60-mdapi.conf
 
+### ドライバーの確認
+VTune Profilerのドライバーを確認します。
+
+```
+/opt/intel/oneapi/vtune/latest/sepdk/src/insmod-sep -q
+pax driver is not loaded.
+socperf3 driver is not loaded.
+sep5 driver is not loaded.
+Warning: skipping SOCWATCH driver, not built
+vtsspp driver is not loaded.
+```
+### 適切なドライバーを検証します（rootユーザーで実行）。
+
+/opt/intel/oneapi/vtune/latest/bin64/vtune-self-checker.sh
 
 
 # 紹介
