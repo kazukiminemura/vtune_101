@@ -47,11 +47,12 @@ Warning: skipping SOCWATCH driver, not built
 vtsspp driver is not loaded.
 ```
 もしドライバーが上記のように見つからない場合
-root-userで以下のステップを実行
+root-userでビルド＆インストール
 ```
 apt install build-essential
 cd /opt/intel/oneapi/vtune/latest/sepdk/src
 ./build-driver
+./insmod-sep -r -g vtune
 ```
 
 ### VTuneの検証（rootユーザーで実行）
