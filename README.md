@@ -15,8 +15,8 @@ oneAPI Base Toolkitのオフラインインストーラーをダウンロード�
 $ sudo sh ./intel-oneapi-toolkit-2025.0.1.46_offline.sh -a --cli --silent --eula=accept
 ```
 ### Intel GPUのセットアップ
-Intel GPUドライバーをインストールします。 Intel GPUドライバーインストールガイド
-手順に従った後、sycl-lsコマンドでGPUデバイスのリストを表示します。
+Intel GPUドライバーをインストール(https://dgpu-docs.intel.com/driver/client/overview.html)
+sycl-lsコマンドでGPUデバイスのリストを表示
 ```
 $ sycl-ls
 [level_zero:gpu][level_zero:0] Intel(R) oneAPI Unified Runtime over Level-Zero, Intel(R) Graphics [0x7d55] 12.71.4 [1.6.32224+14]
