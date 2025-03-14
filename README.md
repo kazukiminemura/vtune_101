@@ -7,14 +7,7 @@
 - Intel® VTune™ Profiler バージョン 2025.0 以降
 これらのツールは Intel® oneAPI Base Toolkit に含まれています。
 
-データ収集にサンプリングドライバが必要です。
-```
-sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
-
-sudo echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
-```
-
-## WSL2上のMeteor Lake-PでUbuntuをセットアップする手順
+## Ubuntu24.04LTS上でのセットアップ手順　****
 Windows機能で「Windows Subsystem for Linux」を有効にし、コンピュータを再起動します。
 WSL2上でUbuntu 24.04.xをセットアップします。
 oneAPI Base Toolkitのオフラインインストーラーをダウンロードします。 oneAPI Base Toolkit ダウンロードページ
@@ -57,6 +50,13 @@ vtsspp driver is not loaded.
 ### 適切なドライバーを検証します（rootユーザーで実行）。
 
 /opt/intel/oneapi/vtune/latest/bin64/vtune-self-checker.sh
+
+
+## WSL2上のMeteor Lake-PでUbuntuをセットアップする手順 (機能が制限されています）
+Windows機能で「Windows Subsystem for Linux」を有効にし、コンピュータを再起動
+WSL2上でUbuntu 24.04.xをセットアップ
+あとはUbuntuと同じ手順
+
 
 
 # 紹介
