@@ -24,6 +24,17 @@ $ sycl-ls
 ### Intel Metrics Discovery APIライブラリのインストール
 libdrm-devパッケージをインストールします。
 ``` $ sudo apt install libdrm-dev ```
+パッケージ版がうまく動かない場合はソースからビルド＆インストール
+```
+$ sudo apt install cmake
+$ git clone https://github.com/intel/metrics-discovery.git
+$ mkdir build && cd build
+$ cmake ..
+$ make -j$(nproc)
+$ sudo make install
+```
+
+
 #### 権限の有効化
 ビデオグループにユーザーを追加します。
 ``` $ groups | grep video ```
@@ -31,6 +42,8 @@ libdrm-devパッケージをインストールします。
 ``` $ sudo usermod -a -G video intel ```
 ###　カーネルのアクセス権限を変更
 ```
+
+sudo sysctl -w dev.i915.perf_stream_paranoid=0
 # sudo echo 0 | sudo tee /proc/sys/dev/i915/perf_stream_paranoid
 $ sudo echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 $ sudo echo 0 | sudo tee /proc/sys/kernel/kptr_restrict
