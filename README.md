@@ -21,7 +21,7 @@ $ sycl-ls
 [opencl:cpu][opencl:0] Intel(R) OpenCL, Intel(R) Core(TM) Ultra 7 155H OpenCL 3.0 (Build 0) [2024.18.12.0.05_160000]
 [opencl:gpu][opencl:1] Intel(R) OpenCL Graphics, Intel(R) Graphics [0x7d55] OpenCL 3.0 NEO  [24.52.32224]
 ```
-### Intel Metrics Discovery APIライブラリのインストール
+### Intel Metrics Discovery API ライブラリのインストール (GPUプロファイル用)
 libdrm-devパッケージをインストールします。
 ``` $ sudo apt install libdrm-dev ```
 パッケージ版がうまく動かない場合はソースからビルド＆インストール
