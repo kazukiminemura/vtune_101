@@ -31,7 +31,7 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 <user> soft nofile <100 * 論理CPUコア数>
 ```
 
-##　プロファイリングサンプル
+##　プロファイリングサンプル  
 please refer sample app [https://github.com/kazukiminemura/sycl_101](https://github.com/kazukiminemura/sycl_101/tree/main/sycl_matrix_multiplication_gpu)
 
 ```
