@@ -18,4 +18,15 @@
 • システム概要  
 • スレッド処理  
 • HPCパフォーマンス特性評価    
-  
+
+## 前提条件
+サンプリングドライバーをインストール(vtune101 README.mdを参照)  
+システム全体およびアンコアイベントの収集を有効にするには、rootまたはsudoを使用して/proc/sys/kernel/perf_event_paranoidを0に設定します
+```
+echo 0 > /proc/sys/kernel/perf_event_paranoid
+```
+マイクロアーキテクチャ探索分析タイプでの収集を有効にするには、開かれたファイルディスクリプタのデフォルト制限を増やします。rootまたはsudoを使用して、/etc/security/limits.confのデフォルト値を100*<論理CPUコア数>に増やします。
+```
+<user> hard nofile <100 * 論理CPUコア数>
+<user> soft nofile <100 * 論理CPUコア数>
+```
