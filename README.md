@@ -93,3 +93,6 @@ vtsspp driver is loaded and owned by group "vtune" with file permissions "660".
 Windows機能で「Windows Subsystem for Linux」を有効にし、コンピュータを再起動
 WSL2上でUbuntu 24.04.xをセットアップ
 あとはUbuntuと同じ手順
+
+# その他の環境でのセットアップは以下を参照してください。
+https://www.intel.com/content/www/us/en/docs/vtune-profiler/user-guide/2025-0/set-up-analysis-target.html
