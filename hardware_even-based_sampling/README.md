@@ -30,3 +30,21 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 <user> hard nofile <100 * 論理CPUコア数>
 <user> soft nofile <100 * 論理CPUコア数>
 ```
+
+##　プロファイリングサンプル
+please refer sample app [https://github.com/kazukiminemura/sycl_101](https://github.com/kazukiminemura/sycl_101/tree/main/sycl_matrix_multiplication_gpu)
+
+```
+# ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -- ./a.out
+vtune: Warning: To profile kernel modules during the session, make sure they are available in the /lib/modules/kernel_version/ location.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /home/intel/projects/sycl_101/sycl_matrix_multiplication_gpu/r000hs -command stop.
+M: 1024, N: 1024, K: 1024
+sequential matrix multiplication: 2.16584 seconds
+Running on: Intel(R) Core(TM) Ultra 7 155H
+somewhat parallel matrix multiplication: 0.367389 seconds
+Even more parallel matrix multiplication: 0.0619769 seconds
+single workitem per workgroup parallel matrix multiplication: 0.317544 seconds
+column parallel matrix multiplication: 0.0892 seconds
+Tiled matrix mulpilication: 0.0279524 seconds
+vtune: Collection stopped.
+```
