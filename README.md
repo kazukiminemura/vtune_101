@@ -7,7 +7,7 @@
 - Intel® VTune™ Profiler バージョン 2025.0 以降
 これらのツールは Intel® oneAPI Base Toolkit に含まれています。
 
-## Ubuntu24.04LTS上でのセットアップ手順
+## Ubuntu24.04 LTS(6.11.0-19-generic)上でのセットアップ手順
 oneAPI Base Toolkitのオフラインインストーラーをダウンロード(https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?packages=oneapi-toolkit&oneapi-toolkit-os=linux&oneapi-lin=offline)
 ```
 $ sudo sh ./intel-oneapi-toolkit-2025.0.1.46_offline.sh -a --cli --silent --eula=accept
