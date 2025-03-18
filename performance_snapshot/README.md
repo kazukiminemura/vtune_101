@@ -4,7 +4,8 @@ ONEAPI_DEVICE_SELECTOR=opencl:gpu vtune --collect performance-snapshot -- ./a.ou
 ```
 
 サンプル例
-![image](https://github.com/user-attachments/assets/a4a46d6b-90be-4efe-8043-a097e6337ed7)
+![image](https://github.com/user-attachments/assets/04fa23e7-ff24-4186-b146-b1f4b0230067)
+
 
 
 
