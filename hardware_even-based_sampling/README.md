@@ -96,4 +96,5 @@ Retire_Latency_CPU_CLK_UNHALTED.THREAD   LPE-Core                  8676000005   
 vtune: Executing actions 100 % done
 ```
 ## VTune GUI 画面例
-![image](https://github.com/user-attachments/assets/6a38635f-790e-45d7-9b72-eed86ea29cf0)
+<img width="1916" alt="image" src="https://github.com/user-attachments/assets/df14a4bf-cddc-44e5-ac69-98b1c8f66774" />
+
