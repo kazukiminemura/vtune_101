@@ -42,40 +42,57 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 ```
 Collection and Platform Info
 ----------------------------
-Parameter                 r000runsa                                                                                                             
+Parameter                 r003runsa                                                                                                             
 ------------------------  -------------------------------------------------------------------------------------------------------------------------
 Application Command Line  ./a.out                                                                                                               
+User Name                 root                                                                                                                  
 Operating System          6.11.0-19-generic DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=24.04
 DISTRIB_CODENAME=noble
 DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
 Computer Name             intel-Alienware-m16-R2                                                                                                
-Result Size               30662555                                                                                                              
-Collection start time     02:41:02 18/03/2025 UTC                                                                                               
-Collection stop time      02:41:05 18/03/2025 UTC                                                                                               
-Collector Type            Driverless Perf per-process sampling                                                                                  
+Result Size               15641413                                                                                                              
+Collection start time     03:00:50 18/03/2025 UTC                                                                                               
+Collection stop time      03:00:52 18/03/2025 UTC                                                                                               
+Collector Type            Event-based sampling driver                                                                                           
 
 CPU
 ---
-Parameter          r000runsa
+Parameter          r003runsa
 -----------------  --------------------------------------------------
 Name               Intel(R) microarchitecture code named Meteorlake-P
-Frequency          2995199828
+Frequency          2995199976
 Logical CPU Count  22
 
 Summary
 -------
-Elapsed Time:  2.948
-Paused Time:   0.0
+Elapsed Time:             2.371
+Paused Time:              0.0
+CPU Time:                 2.276
+Average CPU Utilization:  0.0
+CPI Rate:                 2.033
 
 Event summary
 -------------
-Hardware Event Type      Core Type  Hardware Event Count:Self  Hardware Event Sample Count:Self  Events Per Sample  Precise:Self
------------------------  ---------  -------------------------  --------------------------------  -----------------  ------------
-INST_RETIRED.ANY         E-Core                    3027000000                              1009  3000000                    True
-CPU_CLK_UNHALTED.THREAD  E-Core                   12435000000                              4145  3000000                    True
-INST_RETIRED.ANY         P-Core                   15867000000                              5289  3000000                    True
-CPU_CLK_UNHALTED.THREAD  P-Core                   32310000000                             10770  3000000                    True
+Hardware Event Type                      Core Type  Hardware Event Count:Self  Hardware Event Sample Count:Self  Events Per Sample  Precise:Self
+---------------------------------------  ---------  -------------------------  --------------------------------  -----------------  ------------
+INST_RETIRED.ANY                         P-Core                    5208000000                              1736  3000000                    True
+CPU_CLK_UNHALTED.THREAD                  P-Core                   10650000000                              3550  3000000                    True
+CPU_CLK_UNHALTED.REF_TSC                 P-Core                    6744010116                              3372  2000003                    True
+INST_RETIRED.ANY                         E-Core                      27000000                                 9  3000000                    True
+CPU_CLK_UNHALTED.THREAD                  E-Core                      60000000                                20  3000000                    True
+CPU_CLK_UNHALTED.REF_TSC                 E-Core                             0                                 0  2000003                    True
+INST_RETIRED.ANY                         LPE-Core                    57000000                                19  3000000                    True
+CPU_CLK_UNHALTED.THREAD                  LPE-Core                    51000000                                17  3000000                    True
+CPU_CLK_UNHALTED.REF_TSC                 LPE-Core                    72000108                                36  2000003                    True
+Retire_Latency_CPU_CLK_UNHALTED.THREAD   E-Core                    8877000008                                20  3000000                    True
+Retire_Latency_INST_RETIRED.ANY          E-Core                             9                                 9  3000000                    True
+Retire_Latency_CPU_CLK_UNHALTED.REF_TSC  P-Core               423931125895743                              3372  2000003                    True
+Retire_Latency_CPU_CLK_UNHALTED.THREAD   P-Core               670576683000004                              3550  3000000                    True
+Retire_Latency_INST_RETIRED.ANY          P-Core               320184219000004                              1736  3000000                    True
+Retire_Latency_CPU_CLK_UNHALTED.REF_TSC  LPE-Core                 34664052006                                36  2000003                    True
+Retire_Latency_INST_RETIRED.ANY          LPE-Core                     3000018                                19  3000000                    True
+Retire_Latency_CPU_CLK_UNHALTED.THREAD   LPE-Core                  8676000005                                17  3000000                    True
 vtune: Executing actions 100 % done
 ```
 ## VTune GUI 画面例
