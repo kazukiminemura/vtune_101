@@ -36,7 +36,9 @@ please refer sample app [https://github.com/kazukiminemura/sycl_101](https://git
 
 ```
 # ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune -collect-with runsa -knob enable-stack-collection=true -knob enable-user-tasks=true -knob enable-system-cswitch=true -knob event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,INST_RETIRED.ANY:sample:sa=3000000 -- ./a.out
-
+```
+プロファイル結果
+```
 Collection and Platform Info
 ----------------------------
 Parameter                 r000runsa                                                                                                             
