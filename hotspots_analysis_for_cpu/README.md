@@ -13,8 +13,8 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hotspots -knob sampling-mode=h
 # GUI
 VTuneプロファイラーはInstruction Pointer(IP)のサンプルをdata collectionに保存し解析する。
 
-## Use-mode sampling 例: アプリケーションのみフォーカス
+## Use-mode sampling: アプリケーションのみフォーカス
 ![image](https://github.com/user-attachments/assets/bea3f0e0-f6a8-45bc-b955-389146406b6f)
 
-## Hardware event-basd sampling 例： 少ないオーバーヘッドでシステム全体を計測
+## Hardware event-basd sampling： 少ないオーバーヘッドでシステム全体を計測
 ![image](https://github.com/user-attachments/assets/511766cd-9ccf-498e-ad3c-af9159698d45)
