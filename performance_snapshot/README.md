@@ -3,6 +3,11 @@
 ONEAPI_DEVICE_SELECTOR=opencl:gpu vtune --collect performance-snapshot -- ./a.out
 ```
 
+サンプル例
+![image](https://github.com/user-attachments/assets/a4a46d6b-90be-4efe-8043-a097e6337ed7)
+
+
+
 ## 次のお勧めステップ
 ```
 Recommendations:
