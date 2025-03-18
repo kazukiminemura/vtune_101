@@ -77,3 +77,5 @@ INST_RETIRED.ANY         P-Core                   15867000000                   
 CPU_CLK_UNHALTED.THREAD  P-Core                   32310000000                             10770  3000000                    True
 vtune: Executing actions 100 % done
 ```
+## VTune GUI 画面例
+![image](https://github.com/user-attachments/assets/6a38635f-790e-45d7-9b72-eed86ea29cf0)
