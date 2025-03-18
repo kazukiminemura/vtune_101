@@ -1,6 +1,6 @@
 # Performance Snapshot
 ```
-ONEAPI_DEVICE_SELECTOR=opencl:gpu vtune --collect performance-snapshot -- ./a.out
+ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect performance-snapshot -- ./a.out
 ```
 
 サンプル例
