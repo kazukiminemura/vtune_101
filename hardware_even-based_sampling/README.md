@@ -35,16 +35,43 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 please refer sample app [https://github.com/kazukiminemura/sycl_101](https://github.com/kazukiminemura/sycl_101/tree/main/sycl_matrix_multiplication_gpu)
 
 ```
-# ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hotspots -knob sampling-mode=hw -knob enable-stack-collection=true -- ./a.out
-vtune: Warning: To profile kernel modules during the session, make sure they are available in the /lib/modules/kernel_version/ location.
-vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /home/intel/projects/sycl_101/sycl_matrix_multiplication_gpu/r000hs -command stop.
-M: 1024, N: 1024, K: 1024
-sequential matrix multiplication: 2.16584 seconds
-Running on: Intel(R) Core(TM) Ultra 7 155H
-somewhat parallel matrix multiplication: 0.367389 seconds
-Even more parallel matrix multiplication: 0.0619769 seconds
-single workitem per workgroup parallel matrix multiplication: 0.317544 seconds
-column parallel matrix multiplication: 0.0892 seconds
-Tiled matrix mulpilication: 0.0279524 seconds
-vtune: Collection stopped.
+# ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune -collect-with runsa -knob enable-stack-collection=true -knob enable-user-tasks=true -knob enable-system-cswitch=true -knob event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,INST_RETIRED.ANY:sample:sa=3000000 -- ./a.out
+
+Collection and Platform Info
+----------------------------
+Parameter                 r000runsa                                                                                                             
+------------------------  -------------------------------------------------------------------------------------------------------------------------
+Application Command Line  ./a.out                                                                                                               
+Operating System          6.11.0-19-generic DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+Computer Name             intel-Alienware-m16-R2                                                                                                
+Result Size               30662555                                                                                                              
+Collection start time     02:41:02 18/03/2025 UTC                                                                                               
+Collection stop time      02:41:05 18/03/2025 UTC                                                                                               
+Collector Type            Driverless Perf per-process sampling                                                                                  
+
+CPU
+---
+Parameter          r000runsa
+-----------------  --------------------------------------------------
+Name               Intel(R) microarchitecture code named Meteorlake-P
+Frequency          2995199828
+Logical CPU Count  22
+
+Summary
+-------
+Elapsed Time:  2.948
+Paused Time:   0.0
+
+Event summary
+-------------
+Hardware Event Type      Core Type  Hardware Event Count:Self  Hardware Event Sample Count:Self  Events Per Sample  Precise:Self
+-----------------------  ---------  -------------------------  --------------------------------  -----------------  ------------
+INST_RETIRED.ANY         E-Core                    3027000000                              1009  3000000                    True
+CPU_CLK_UNHALTED.THREAD  E-Core                   12435000000                              4145  3000000                    True
+INST_RETIRED.ANY         P-Core                   15867000000                              5289  3000000                    True
+CPU_CLK_UNHALTED.THREAD  P-Core                   32310000000                             10770  3000000                    True
+vtune: Executing actions 100 % done
 ```
