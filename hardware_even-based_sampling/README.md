@@ -31,9 +31,10 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 <user> soft nofile <100 * 論理CPUコア数>
 ```
 
-## プロファイリングサンプル
-please refer sample app [https://github.com/kazukiminemura/sycl_101](https://github.com/kazukiminemura/sycl_101/tree/main/sycl_matrix_multiplication_gpu)
+## プロファイリング例
+サンプルアプリケーション [https://github.com/kazukiminemura/sycl_101](https://github.com/kazukiminemura/sycl_101/tree/main/sycl_matrix_multiplication_gpu)
 
+ハードウェアイベントサンプリングはデフォルトでは有効ではないので、オプションをいくつか加える必要がある。
 ```
 # ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune -collect-with runsa -knob enable-stack-collection=true -knob enable-user-tasks=true -knob enable-system-cswitch=true -knob event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,INST_RETIRED.ANY:sample:sa=3000000 -- ./a.out
 ```
