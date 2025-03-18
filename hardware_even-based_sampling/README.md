@@ -36,7 +36,7 @@ echo 0 > /proc/sys/kernel/perf_event_paranoid
 
 ハードウェアイベントサンプリングはデフォルトでは有効ではないので、オプションをいくつか加える必要がある。
 ```
-# ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune -collect-with runsa -knob enable-stack-collection=true -knob enable-user-tasks=true -knob enable-system-cswitch=true -knob event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,INST_RETIRED.ANY:sample:sa=3000000 -- ./a.out
+# ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune -collect-with runsa -knob enable-stack-collection=true -knob enable-system-cswitch=true -knob event-config=CPU_CLK_UNHALTED.THREAD:sa=3000000,INST_RETIRED.ANY:sample:sa=3000000 -- ./a.out
 ```
 プロファイル結果
 ```
