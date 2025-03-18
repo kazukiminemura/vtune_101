@@ -10,7 +10,10 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hotspots -knob sampling-mode=h
 
 ```
 
-# 分析ビュー
+# GUI
+VTuneプロファイラーはInstruction Pointer(IP)のサンプルをdata collectionに保存し解析する。
+
+## 分析ビュー
 **サマリーウィンドウ：**  
 アプリケーション全体の実行統計を表示し、CPU時間とプロセッサの利用率を分析します。  
 **ボトムアップウィンドウ：**  
@@ -22,8 +25,6 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hotspots -knob sampling-mode=h
 **プラットフォームウィンドウ：**  
 CPUとGPUの利用率、フレームレート、メモリ帯域幅、およびユーザータスクの詳細を提供します（対応するメトリックが収集されている場合）。  
 
-# GUI
-VTuneプロファイラーはInstruction Pointer(IP)のサンプルをdata collectionに保存し解析する。
 
 ## Use-mode sampling: アプリケーションのみフォーカス
 ![image](https://github.com/user-attachments/assets/bea3f0e0-f6a8-45bc-b955-389146406b6f)
