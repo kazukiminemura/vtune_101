@@ -70,6 +70,7 @@ apt install build-essential
 cd /opt/intel/oneapi/vtune/latest/sepdk/src
 ./build-driver
 ./insmod-sep -r -g vtune
+sudo usermod -a -G vtune <ユーザー名>
 ```
 以下のようになれば成功
 ```
