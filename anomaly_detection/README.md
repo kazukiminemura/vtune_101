@@ -10,7 +10,7 @@
 # 使用法
 コマンド
 ```
-icpx -fsycl -g -O2 sycl_matrix_multiplication_gpu.cpp -littnotify
+icpx -fsycl -g -O2 sycl_itt.cpp -littnotify
 vtune --collect anomaly-detection -- ./a.out
 ```
 結果
