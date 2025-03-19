@@ -17,45 +17,45 @@ vtune --collect anomaly-detection -- ./a.out
 ```
 Collection and Platform Info
 ----------------------------
-Parameter                 r010pt                                                                                                                  
+Parameter                 r000pt                                                                                   
 ------------------------  -------------------------------------------------------------------------------------------------------------------------
-Application Command Line  ./a.out                                                                                                                 
+Application Command Line  ./a.out                                                                                  
 Operating System          6.11.0-19-generic DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=24.04
 DISTRIB_CODENAME=noble
 DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
-Computer Name             intel-Alienware-m16-R2                                                                                                  
-Result Size               1286237354                                                                                                              
-Collection start time     08:09:33 19/03/2025 UTC                                                                                                 
-Collection stop time      08:09:37 19/03/2025 UTC                                                                                                 
-Collector Type            Event-based sampling driver                                                                                             
+Computer Name             intel-Alienware-m16-R2                                                                   
+Result Size               1389210058                                                                               
+Collection start time     08:43:43 19/03/2025 UTC                                                                  
+Collection stop time      08:43:45 19/03/2025 UTC                                                                  
+Collector Type            Event-based sampling driver                                                              
 
 CPU
 ---
-Parameter          r010pt
+Parameter          r000pt
 -----------------  --------------------------------------------------
 Name               Intel(R) microarchitecture code named Meteorlake-P
-Frequency          2995199819
+Frequency          2995200049
 Logical CPU Count  22
 
 Summary
 -------
-Elapsed Time:             3.868
+Elapsed Time:             1.985
 Paused Time:              0.0
 CPU Time:
-Average CPU Utilization:  0.980
+Average CPU Utilization:  0.997
 
 Event summary
 -------------
 Hardware Event Type  Core Type  Hardware Event Count:Self  Hardware Event Sample Count:Self  Events Per Sample  Precise:Self
 -------------------  ---------  -------------------------  --------------------------------  -----------------  ------------
-PT_CLOCKTICKS        [Unknown]                          0                                 0  1
-PT_WAIT              [Unknown]                          0                                 0  1
-PT_INACTIVE          [Unknown]                          0                                 0  1
-PT_INSTRUCTIONS      [Unknown]                          0                                 0  1
-PT_BRANCHES          [Unknown]                          0                                 0  1
-ITERATION_COUNT      [Unknown]                          0                                 0  1
-LOOP_ENTRY_COUNT     [Unknown]                          0                                 0  1
-CALL_COUNT           [Unknown]                          0                                 0  1
+PT_CLOCKTICKS        [Unknown]                          0                                 0  1                     
+PT_WAIT              [Unknown]                          0                                 0  1                     
+PT_INACTIVE          [Unknown]                          0                                 0  1                     
+PT_INSTRUCTIONS      [Unknown]                          0                                 0  1                     
+PT_BRANCHES          [Unknown]                          0                                 0  1                     
+ITERATION_COUNT      [Unknown]                          0                                 0  1                     
+LOOP_ENTRY_COUNT     [Unknown]                          0                                 0  1                     
+CALL_COUNT           [Unknown]                          0                                 0  1                     
 vtune: Executing actions 100 % done
 ```
