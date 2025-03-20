@@ -111,5 +111,6 @@ Analyze memory objects」オプションを有効にしてデータを収集す�
 <img width="1582" alt="image" src="https://github.com/user-attachments/assets/ae4dacf9-e618-4399-9686-2b5d22228c33" />
 
 
-### **Platform**: Task API、Ftrace/Systrace イベントタスク、OpenCL™ API タスクなど、コードで指定されたタスクの詳細を提供します。対応するプラットフォーム指標が収集されている場合、Platform ウィンドウは、ソフトウェアキュー上の GPU 使用率、CPU 時間使用率、OpenCL™ カーネルデータ、GPU ハードウェア指標の Overview グループ、メモリ帯域幅、および CPU 周波数ごとの GPU パフォーマンスとして、時間経過データを表示します。
+### Platform: Task API、Ftrace/Systrace イベントタスク、OpenCL™ API タスクなど、コードで指定されたタスクの詳細を提供します。
+対応するプラットフォーム指標が収集されている場合、Platform ウィンドウは、ソフトウェアキュー上の GPU 使用率、CPU 時間使用率、OpenCL™ カーネルデータ、GPU ハードウェア指標の Overview グループ、メモリ帯域幅、および CPU 周波数ごとの GPU パフォーマンスとして、時間経過データを表示します。
 ![image](https://github.com/user-attachments/assets/4c58cdf7-4438-46b2-8933-1cf143dea11b)
