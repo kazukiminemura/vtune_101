@@ -119,6 +119,11 @@ DRAM、Intel® UPI リンク、および物理コアのシステムトポロジ�
 Analyze memory objects」オプションを有効にしてデータを収集すると、Bottom-up ウィンドウにグリッドおよび Call Stack ペイン内でメモリアロケーションのコールスタックも表示されます。関数レベルの後にメモリオブジェクトグループ化レベルを使用して、アロケーションコールのソース位置としてメモリオブジェクトを表示します。
 <img width="1582" alt="image" src="https://github.com/user-attachments/assets/ae4dacf9-e618-4399-9686-2b5d22228c33" />
 
+### Bandwidth Domain
+Bandwidth Domain / Bandwidth Utilization Type / Function / Call Stack のグループ化レベルを選択します。その後、Interconnect ドメインのグリッド行を展開し、Utilization Typeの行を展開すると、システムの Interconnect 帯域幅利用率が高かった際に実行されていたすべての関数を確認できます
+![Screenshot 2025-03-20 212312](https://github.com/user-attachments/assets/64cfae5a-90d6-4abf-a83c-089c961a93ee)
+
+
 
 ## Platform: Task API、Ftrace/Systrace イベントタスク、OpenCL™ API タスクなど、コードで指定されたタスクの詳細を提供します。
 対応するプラットフォーム指標が収集されている場合、Platform ウィンドウは、ソフトウェアキュー上の GPU 使用率、CPU 時間使用率、OpenCL™ カーネルデータ、GPU ハードウェア指標の Overview グループ、メモリ帯域幅、および CPU 周波数ごとの GPU パフォーマンスとして、時間経過データを表示します。
