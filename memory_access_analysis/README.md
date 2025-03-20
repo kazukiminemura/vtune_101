@@ -96,14 +96,21 @@ vtune: Executing actions 100 % done
 
 ## GUI
 ### Summary: アプリケーション全体の実行に関する統計情報を表示します
-Platform Diagram は、DRAM、Intel® UPI リンク、および物理コアのシステムトポロジーと利用率指標を表示します。
+<img width="1565" alt="image" src="https://github.com/user-attachments/assets/d50abf55-a0fe-43aa-957e-97a039924f7b" />  
 
+#### Platform Diagram
+DRAM、Intel® UPI リンク、および物理コアのシステムトポロジーと利用率指標を表示します。
 非最適なアプリケーショントポロジーは、DRAM および Intel® QuickPath Interconnect (Intel® QPI) または Intel® Ultra Path Interconnect (Intel® UPI) のクロスソケットトラフィックを引き起こす可能性があります。これらの状況は、パフォーマンスを制限する要因となる可能性があります。
-
 - 分析構成で「最大DRAM帯域幅を評価する (Evaluate max DRAM bandwidth)」オプションを選択した場合、Platform Diagram は平均DRAM利用率を表示します。それ以外の場合は、平均DRAM帯域幅が表示されます。  
 - 平均UPI利用率 (Average UPI Utilization) 指標は、送信レベルでのUPI利用率を示します。ソケット間のUPIリンクの数に関係なく、Platform Diagram では単一のクロスソケット接続を表示します。複数のリンクがある場合、図にはその最大値が表示されます。  
 - 各ソケットの上部には、平均物理コア利用率 (Average Physical Core Utilization) 指標があり、分析中のアプリケーションによる物理コアの利用状況を示します。  
-<img width="1565" alt="image" src="https://github.com/user-attachments/assets/d50abf55-a0fe-43aa-957e-97a039924f7b" />  
+
+![image](https://github.com/user-attachments/assets/6c220447-0239-4d40-882e-092ac16b072c)
+
+#### Bandwidth Utilization
+このヒストグラムは、選択された帯域幅ドメインによるシステム帯域幅の利用時間を示し、帯域幅の利用率を「高 (High)」、「中 (Medium)」、「低 (Low)」に分類するための閾値を提供します。
+デフォルトでは、メモリ分析結果の閾値は、収集開始前に VTune Profiler によって測定された達成可能な最大DRAM帯域幅に基づいて計算され、Summary ウィンドウの System Bandwidth セクションに表示されます。
+![image](https://github.com/user-attachments/assets/6e5a4ad4-d153-4ac0-b530-08c28a69f424)
 
 
 ### Bottom-up: 各ホットスポットオブジェクトの指標ごとのパフォーマンスデータを表示します
