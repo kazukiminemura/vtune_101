@@ -20,7 +20,7 @@
 ```
 ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect uarch-exploration -- ./a.out
 ```
-
+## GUI例
 Summary
 ![image](https://github.com/user-attachments/assets/95d51232-f1a1-4805-a66b-71684863b6c4)
 
