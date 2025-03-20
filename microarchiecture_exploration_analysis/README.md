@@ -17,8 +17,6 @@
 - バックエンドの遅延により有用な作業で埋めることができなかったパイプラインスロット（バックエンドボトルネック: Back-end Bound）
 
 
-各指標は、Intel のアーキテクトによって定義されたイベント比率であり、それぞれに事前定義された閾値があります。VTune Profiler は、各集約されたプログラム単位（例えば、関数）に対する比率値を分析します。この値が閾値を超え、さらにそのプログラム単位が収集された CPU 時間の 5%以上の CPU 時間を持つ場合、それは潜在的なパフォーマンス問題を示唆し、そのような値をピンクで強調表示します。
-
 ## 使用方法
 ```
 ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect uarch-exploration -- ./a.out
@@ -26,6 +24,8 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect uarch-exploration -- ./a.out
 ## GUI例
 ### Summary
 ![image](https://github.com/user-attachments/assets/95d51232-f1a1-4805-a66b-71684863b6c4)
+各指標は、Intel のアーキテクトによって定義されたイベント比率であり、それぞれに事前定義された閾値があります。VTune Profiler は、各集約されたプログラム単位（例えば、関数）に対する比率値を分析します。この値が閾値を超え、さらにそのプログラム単位が収集された CPU 時間の 5%以上の CPU 時間を持つ場合、それは潜在的なパフォーマンス問題を示唆し、そのような値をピンクで強調表示します。
+
 
 ### Bottom-up
 ![image](https://github.com/user-attachments/assets/f618f157-f6c2-4098-92ca-04153f97f025)
