@@ -96,7 +96,6 @@ vtune: Executing actions 100 % done
 
 # GUI
 ## Summary: アプリケーション全体の実行に関する統計情報を表示します
-<img width="1565" alt="image" src="https://github.com/user-attachments/assets/d50abf55-a0fe-43aa-957e-97a039924f7b" />  
 
 ### Platform Diagram
 DRAM、Intel® UPI リンク、および物理コアのシステムトポロジーと利用率指標を表示します。
