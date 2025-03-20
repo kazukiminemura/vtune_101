@@ -2,6 +2,12 @@
 マイクロアーキテクチャ探索は、典型的なクライアントアプリケーションを分析するためのイベントの完全なリストを収集します。  
 それにより、指標に使用される一連の事前定義された比率を計算し、ハードウェアレベルのパフォーマンス問題を特定するのに役立ちます。  
 
+# 使用方法
+```
+ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect uarch-exploration -- ./a.out
+```
+
+
 Summary
 ![image](https://github.com/user-attachments/assets/0541b22a-6e12-4aeb-9645-b6c81b6f0459)
 
