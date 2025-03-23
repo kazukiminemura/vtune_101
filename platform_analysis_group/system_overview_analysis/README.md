@@ -101,6 +101,7 @@ Linuxターゲットの場合、システム概要分析では以下のFtrace*�
     - ページフォールト
     - 予期しないウェイクアップによる電力消費の問題
 
+**使用例**
 ```
 vtune --collect system-overview -knob collecting-mode=hw-tracing  -- ./a.out
 ```
@@ -108,10 +109,15 @@ vtune --collect system-overview -knob collecting-mode=hw-tracing  -- ./a.out
 ![Screenshot 2025-03-23 191205](https://github.com/user-attachments/assets/9c35c01c-aa0f-4e13-8482-e0efcb822da9)
 
 ## Power Usage Analysis
+システム概要分析の電力消費分析機能を利用して、システムのエネルギー消費特性を把握してください。この機能により、システム全体の消費電力量を詳細に評価することが可能です。これには、特定のコンポーネントやプロセスが消費する電力の分析が含まれ、効率改善のための貴重なデータを提供します。
+
+**使用例**
 ```
 vtune --collect system-overview -knob  analyze-power-usage=true -- ./a.out
 ```
 
+データ収集が完了したら、SummaryウィンドウのEnergy Consumptionセクションをご確認ください。
+このセクションでは、データ収集中にシステム全体で消費された総電力量が表示されます。また、CPUパッケージとDRAMモジュールごとの消費電力の内訳も確認できます。
 ![image](https://github.com/user-attachments/assets/55ca311f-c390-4e00-b8ff-c49e367fbf11)
 
 
