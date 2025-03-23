@@ -118,10 +118,11 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect system-overview -knob  analyze
 
 データ収集が完了したら、SummaryウィンドウのEnergy Consumptionセクションをご確認ください。
 このセクションでは、データ収集中にシステム全体で消費された総電力量が表示されます。また、CPUパッケージとDRAMモジュールごとの消費電力の内訳も確認できます。
-![image](https://github.com/user-attachments/assets/55ca311f-c390-4e00-b8ff-c49e367fbf11)
+<img width="296" alt="image" src="https://github.com/user-attachments/assets/80389959-0b08-44ef-a533-3138717ee080" />
 
 Platformウィンドウに切り替えると、時間経過に伴う電力消費の詳細なビューを確認できます。
 また、各デバイスの消費電力と、DRAM帯域幅、CPU周波数、CPU使用率の異なる指標を相関させることができます。
+![image](https://github.com/user-attachments/assets/61fe9d93-35b0-4da7-a433-62b4e8da3f17)
 
 **(注記)**
 タイムライン上では、デバイスの消費電力が「ミリジュール毎秒（millijoules per second）」として表されますが、これは物理的には「ミリワット（milliwatts）」と等価です。
@@ -135,6 +136,4 @@ Platformウィンドウに切り替えると、時間経過に伴う電力消費
 ```
 ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect system-overview -knob analyze-throttling-reasons=true  -- ./a.out
 ```
-
-![Screenshot 2025-03-23 194542](https://github.com/user-attachments/assets/3938d473-05e7-4c35-b982-0c4c68507425)
-
+<img width="781" alt="image" src="https://github.com/user-attachments/assets/819bf066-333c-456b-875d-ae76d68fc698" />
