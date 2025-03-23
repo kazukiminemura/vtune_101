@@ -113,7 +113,7 @@ vtune --collect system-overview -knob collecting-mode=hw-tracing  -- ./a.out
 
 **使用例**
 ```
-vtune --collect system-overview -knob  analyze-power-usage=true -- ./a.out
+ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect system-overview -knob  analyze-power-usage=true -- ./a.out
 ```
 
 データ収集が完了したら、SummaryウィンドウのEnergy Consumptionセクションをご確認ください。
@@ -130,3 +130,11 @@ Platformウィンドウに切り替えると、時間経過に伴う電力消費
 もしCPUが安全な温度範囲を超えて動作している場合、システムが安定化を試みる過程でCPUの周波数が大幅に低下することがあります。この周波数低下（スロットリング）は、CPUの動作温度を安全な範囲に戻すために発生し、重大なパフォーマンス低下を引き起こす可能性があります。
 
 このようなCPUのスロットリングの原因を特定するためには、システム概要分析を実行してください。この分析では、温度上昇を引き起こす可能性のある要因や、パフォーマンスに影響を与えるその他のプラットフォームレベルの問題を確認できます。
+
+**使用例**
+```
+ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect system-overview -knob analyze-throttling-reasons=true  -- ./a.out
+```
+
+![Screenshot 2025-03-23 194542](https://github.com/user-attachments/assets/3938d473-05e7-4c35-b982-0c4c68507425)
+
