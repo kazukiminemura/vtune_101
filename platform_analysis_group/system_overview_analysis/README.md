@@ -101,3 +101,11 @@ Linuxターゲットの場合、システム概要分析では以下のFtrace*�
     - ページフォールト
     - 予期しないウェイクアップによる電力消費の問題
 
+```
+vtune --collect system-overview -knob collecting-mode=hw-tracing  -- ./a.out
+```
+
+![Screenshot 2025-03-23 191029](https://github.com/user-attachments/assets/a348c8ce-a794-42c9-9d9e-d524f1f7c932)
+
+
+
