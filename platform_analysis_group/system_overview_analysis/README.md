@@ -107,5 +107,11 @@ vtune --collect system-overview -knob collecting-mode=hw-tracing  -- ./a.out
 
 ![Screenshot 2025-03-23 191205](https://github.com/user-attachments/assets/9c35c01c-aa0f-4e13-8482-e0efcb822da9)
 
+## Power Usage Analysis
+```
+vtune --collect system-overview -knob  analyze-power-usage=true -- ./a.out
+```
+
+![image](https://github.com/user-attachments/assets/55ca311f-c390-4e00-b8ff-c49e367fbf11)
 
 
