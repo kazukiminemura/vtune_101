@@ -18,3 +18,5 @@ Linuxターゲットの場合、システム概要分析では以下のFtrace*�
 - irq（割り込み）
 - softirq（ソフト割り込み）
 
+
+# Hardware Tracing Mode (Linux and Android Targets)
