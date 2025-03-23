@@ -120,4 +120,8 @@ vtune --collect system-overview -knob  analyze-power-usage=true -- ./a.out
 このセクションでは、データ収集中にシステム全体で消費された総電力量が表示されます。また、CPUパッケージとDRAMモジュールごとの消費電力の内訳も確認できます。
 ![image](https://github.com/user-attachments/assets/55ca311f-c390-4e00-b8ff-c49e367fbf11)
 
+Platformウィンドウに切り替えると、時間経過に伴う電力消費の詳細なビューを確認できます。
+また、各デバイスの消費電力と、DRAM帯域幅、CPU周波数、CPU使用率の異なる指標を相関させることができます。
 
+**(注記)**
+タイムライン上では、デバイスの消費電力が「ミリジュール毎秒（millijoules per second）」として表されますが、これは物理的には「ミリワット（milliwatts）」と等価です。
