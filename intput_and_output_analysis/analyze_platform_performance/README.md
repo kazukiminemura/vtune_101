@@ -17,7 +17,9 @@
 ```
 ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect io -knob mmio=true -- ./a.out
 ```
-N/A on non-Xeon CPU.
+
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/ffde4be7-d542-4e37-ac43-160f71997690" />
+
 
 I/Oデバイスは、PCIeバスとデバイス番号を示す短い名前で表示されます。デバイスのツールチップには、完全なデバイス名、リンクの性能、およびステータスが表示されます。デバイスの画像にカーソルを合わせることで、詳細なデバイス情報を確認できます
 
@@ -41,7 +43,8 @@ I/Oデバイスは、PCIeバスとデバイス番号を示す短い名前で表�
 受信および送信PCIe帯域幅メトリックの粒度は、CPUモデル、使用されるコレクター、およびユーザーの権限に依存します。
 "Platform"タブのタイムラインを使用して、デバイス単位で時間経過に伴う受信および送信PCIe帯域幅を分析できます。
 
-N/A on non-Xeon CPU.
+![image](https://github.com/user-attachments/assets/72e41bf0-77cb-4f91-9e74-6e9ea04f4797)
+
 
 
 
