@@ -85,7 +85,7 @@ vtune: Executing actions 100 % done
 ```
 
 ## GUI
-![Screenshot 2025-03-24 221852](https://github.com/user-attachments/assets/21945dd0-0dca-433c-9071-4035b152c543)
+<img width="1577" alt="image" src="https://github.com/user-attachments/assets/78ca98c1-6e3e-4f0f-b9f9-009839e1d172" />
 
 デフォルトでは、GPUオフロード分析により、GPU利用率オプションが有効になり、GPUの稼働状況を時間ごとに確認し、アプリケーションがCPU依存かGPU依存かを理解することができます。その結果、Graphicsウィンドウのタイムラインビューを確認すると、以下のような現象が見られることがあります：
 - GPUがほとんどの時間稼働している
