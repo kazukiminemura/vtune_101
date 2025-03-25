@@ -68,3 +68,13 @@ vtune: Executing actions 100 % done
 ```
 
 ## GUI
+GPUコンピュート/メディアホットスポット分析がデータ収集を完了すると、summuryウィンドウに以下のメトリクスが表示されます：
+- GPU時間
+- 占有率
+- 現在の計算タスク構成で予想される最大占有率
+- GPU上で実行された最もアクティブな計算タスク
+- 最もアクティブなIntel® oneAPI Collective Communications Library（oneCCL）の通信タスク
+
+<img width="1575" alt="image" src="https://github.com/user-attachments/assets/80782a52-90a3-4f9a-9ff3-41bcdc1ebb9d" />
+
+
