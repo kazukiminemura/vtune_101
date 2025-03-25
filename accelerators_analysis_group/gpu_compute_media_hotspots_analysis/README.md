@@ -128,8 +128,8 @@ Trace GPU programming APIsオプションを使用して、Intel Processor Graph
 - **平均レイテンシ**：メモリ読み取りおよび同期命令の平均遅延（サイクル単位）
 - **インスタンスごとの GPU 命令数**：1 つのカーネルインスタンスあたりに実行される GPU 命令の平均数。
 - **スレッドごとの GPU 命令数**：1 つのカーネルインスタンスあたりに 1 スレッドが実行する GPU 命令の平均数。
-命令カウントプロファイリングモードを有効にすると、VTune Profiler はカーネルが実行した命令を以下のグループに分類して表示します。
-
+**命令カウントプロファイリングモード**(instruction-count)を有効にすると、VTune Profiler はカーネルが実行した命令を以下のグループに分類して表示します。
+<img width="1037" alt="image" src="https://github.com/user-attachments/assets/ae557598-cd2e-475f-9050-b3a07e93deaf" />
 
 
 # データの表示
