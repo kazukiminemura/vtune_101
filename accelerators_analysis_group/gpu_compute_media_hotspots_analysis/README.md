@@ -75,8 +75,6 @@ GPUコンピュート/メディアホットスポット分析がデータ収集�
 - GPU上で実行された最もアクティブな計算タスク
 - 最もアクティブなIntel® oneAPI Collective Communications Library（oneCCL）の通信タスク
 
-<img width="1575" alt="image" src="https://github.com/user-attachments/assets/80782a52-90a3-4f9a-9ff3-41bcdc1ebb9d" />
-
 ## 特性分析の設定
 特性構成オプションを使用して以下を行います
 - レンダリングおよびGPGPUエンジンの使用状況を監視する（Intel Graphicsのみ対応）
@@ -105,3 +103,12 @@ Dynamic Instruction Countプリセットを除いて、他のすべてのプリ�
 - Lunar Lake
 - Battlemage
 
+**データの表示**
+VTune Profilerは分析を実行し、GPUコンピュート/メディアホットスポットのビューでデータを開き、以下のウィンドウでさまざまなプラットフォームデータを提供します
+## summary
+全体およびエンジンごとのGPU使用率、EUが停止またはアイドル状態であった時間の割合とその潜在的な理由、そして最も負荷の高いGPU計算タスクを表示します。
+<img width="1575" alt="image" src="https://github.com/user-attachments/assets/80782a52-90a3-4f9a-9ff3-41bcdc1ebb9d" />
+
+## Graphics
+各スレッドごとのCPUおよびGPU使用データを表示し、さまざまな種類のGPUメモリアクセスを分析するためのGPUハードウェアメトリクスの拡張リストを提供します。GPUメトリクスの説明については、グリッド内の列名にカーソルを合わせるか、右クリックして「この列は何ですか？」コンテキストメニューオプションを選択します
+<img width="1580" alt="image" src="https://github.com/user-attachments/assets/6ad7d06c-cc90-4dec-b299-23020565eadb" />
