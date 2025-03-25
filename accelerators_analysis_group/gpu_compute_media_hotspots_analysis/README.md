@@ -10,3 +10,61 @@ Intel Graphics レンダーエンジンとハードウェア メトリクスGPU�
 GPUの潜在能力を最大限に活用するには、できるだけ多くのスレッドをスケジュールできるようにし、アイドル状態のサイクルを最小化する必要があります。停止の最小化は、グラフィックスおよび汎用コンピューティングGPUアプリケーションにとって非常に重要です。
 
 VTune ProfilerはIntel Graphicsのハードウェアイベントを監視し、サンプリング期間中のGPUリソース利用率についてのメトリクスを表示できます。たとえば、EUがアイドル状態、停止状態、またはアクティブ状態だったサイクルの割合や、メモリアクセスやその他の機能ユニットの統計情報を提供します。VTune ProfilerがGPUカーネルの実行をトレースする場合、各カーネルをGPUメトリクスで注釈付けします。  
+
+## 使い方
+```
+vtune --collect gpu-hotspots -- ./a.out
+```
+
+結果例
+```
+Generating a report                              Elapsed Time: 70.963s
+    GPU Time: 67.423s
+XVE Array Stalled/Idle: 83.3% of Elapsed time with GPU busy
+ | The percentage of time when the XVEs were stalled or idle is high, which has
+ | a negative impact on compute-bound applications.
+ |
+    GPU L3 Bandwidth Bound: 0.8% of peak value
+
+        Hottest GPU Computing Tasks Bound by GPU L3 Bandwidth
+        Computing Task  Total Time
+        --------------  ----------
+    Occupancy: 99.7% of peak value
+
+        Hottest GPU Computing Tasks with Low Occupancy
+        Computing Task  Total Time  SIMD Width  Peak XVE Threads Occupancy(%)  Occupancy(%)  SIMD Utilization(%)
+        --------------  ----------  ----------  -----------------------------  ------------  -------------------
+Collection and Platform Info
+    Application Command Line: ./a.out
+    User Name: root
+    Operating System: 6.11.0-19-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=24.04 DISTRIB_CODENAME=noble DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+    Computer Name: intel-Alienware-m16-R2
+    Result Size: 466.0 MB
+    Collection start time: 13:48:08 25/03/2025 UTC
+    Collection stop time: 13:49:19 25/03/2025 UTC
+    Collector Type: Event-based sampling driver,User-mode sampling and tracing
+    CPU
+        Name: Intel(R) microarchitecture code named Meteorlake-P
+        Frequency: 2.995 GHz
+        Logical CPU Count: 22
+    GPU
+        Name: Meteor Lake-P [Intel Arc Graphics]
+        Vendor: Intel Corporation
+        XVE Count: 128
+        Max XVE Thread Count: 8
+        Max Core Frequency: 2.250 GHz
+        GPU OpenCL Info
+            Version
+            Max Compute Units: 128
+            Max Work Group Size: 1,024
+            Local Memory: 65.5 KB
+            SVM Capabilities
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % done
+```
+
+## GUI
