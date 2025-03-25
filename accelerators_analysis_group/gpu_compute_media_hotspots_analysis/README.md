@@ -103,7 +103,22 @@ Dynamic Instruction Countプリセットを除いて、他のすべてのプリ�
 - Lunar Lake
 - Battlemage
 
-**データの表示**
+
+## 特性分析の追加データ
+Trace GPU programming APIsオプションを使用して、Intel Processor Graphics上で実行されているSYCL、OpenCL™、またはIntel Media SDKプログラムを分析します。このオプションは、CPU側でアプリケーションのパフォーマンスに影響を与える可能性があります。
+
+**使用上の注意点**
+- OpenCLカーネル: Intel Graphics上で動作するWindowsおよびLinuxターゲットで特性分析を実行できます。
+- Intel Media SDKプログラム分析: Intel Graphics上で動作するWindowsおよびLinuxターゲットで利用可能です。
+- 特性分析のサポート対象: Launch ApplicationおよびAttach to Processターゲットタイプのみがサポートされます。
+- Level Zeroランタイム: Attach to Processターゲットタイプをサポートしていません。
+- Attach to ProcessモードでのOpenCLカーネルのプロファイリング: 計算キューがすでに作成されているプロセスにアタッチした場合、VTune Profilerはこのキュー内のOpenCLカーネルのデータを表示しません。
+- メモリ帯域幅を計算するためのデータ収集: Analyze memory bandwidthオプションを使用します。この分析を行うには、Intelサンプリングドライバーをインストールしてください。
+- GPUサンプリング間隔: GPUハードウェアメトリクス収集用のGPUサンプル間隔（ミリ秒単位）を指定します。デフォルトでは、VTune Profilerは1ミリ秒の間隔を使用します
+
+
+
+# データの表示
 VTune Profilerは分析を実行し、GPUコンピュート/メディアホットスポットのビューでデータを開き、以下のウィンドウでさまざまなプラットフォームデータを提供します
 ## summary
 全体およびエンジンごとのGPU使用率、EUが停止またはアイドル状態であった時間の割合とその潜在的な理由、そして最も負荷の高いGPU計算タスクを表示します。
