@@ -1,6 +1,10 @@
 # NPUエクスプロレーション分析
 ニューラルプロセッシングユニット（NPU）は、オペレーティングシステムによって明示的にオフロードされたAIワークロードのパフォーマンスを加速することができます。NPUは、AIおよび機械学習（ML）ワークロードのパフォーマンスを向上させるために特別に設計されています。Intel® Distribution of OpenVINO™ツールキットを使用して、人気のあるMLモデル（音声認識や画像認識タスクなど）をIntel NPUにオフロードします。その後、NPUエクスプロレーション分析を使用してAIをプロファイルします。
 
+## 準備
+Building a standalone driver: https://github.com/intel/linux-npu-driver/blob/main/docs/overview.md
+
+
 ## NPUデータ収集モード
 Intel® VTune™ ProfilerはNPUのパフォーマンスに関するハードウェアメトリクスを次の2つの方法で収集できます：
 - **Time-based mode**  
