@@ -37,6 +37,56 @@ Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOC�
 データ収集が完了すると、Intel® VTune™ Profilerは結果を準備し、サマリウィンドウに表示します
 
 # 使い方(windows only)
+```
+vtune --collect npu -- C:\Users\MTL\Documents\Intel\OpenVINO\openvino_cpp_samples_build\intel64\Release\benchmark_app.exe -m classification.xml -d NPU
+```
+
+```
+Generating a report                              Elapsed Time: 68.938s
+    Total Thread Count: 13
+    Paused Time: 0s
+
+NPU Device Load
+Device             NPU DDR Data Transferred
+-----------------  ------------------------
+Intel(R) AI Boost                   1.1 TB
+
+NPU Top Compute Tasks
+Computing Task (NPU)     Computing Task Time  Computing Task Count
+-----------------------  -------------------  --------------------
+zeAppendGraphExecute                110.736s                69,689
+zeAppendGraphInitialize               0.000s                     1
+
+Top Tasks
+Task Type                          Task Time  Task Count  Average Task Time
+---------------------------------  ---------  ----------  -----------------
+zeFenceHostSynchronize               58.915s      69,694             0.001s
+zeCommandQueueExecuteCommandLists     0.688s      69,694             0.000s
+zeMemAllocHost                        0.008s           8             0.001s
+zeCommandQueueCreate                  0.008s           2             0.004s
+zeCommandListCreate                   0.000s           5             0.000s
+Collection and Platform Info
+    Application Command Line: C:\Users\MTL\Documents\Intel\OpenVINO\openvino_cpp_samples_build\intel64\Release\benchmark_app.exe "-m" "classification.xml" "-d" "NPU"
+    Operating System: Microsoft Windows 10
+    Computer Name: intel
+    Result Size: 173.9 MB
+    Collection start time: 01:19:12 26/03/2025 UTC
+    Collection stop time: 01:20:22 26/03/2025 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Intel(R) microarchitecture code named Meteorlake-P
+        Frequency: 2.995 GHz
+        Logical CPU Count: 22
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: not detected
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % done
+```
 
 
 # Summary window
@@ -44,8 +94,13 @@ Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOC�
 - NPUデバイス負荷 - このセクションは、NPUとDDRメモリ間で転送されたデータ量を示します。
 - NPUトップ計算タスク - このセクションは、タスクがNPU上で実行された総時間を記録します。
 
+![image](https://github.com/user-attachments/assets/b21bff4a-a4d5-45f5-b3f7-5073c3caa95a)
+
+
 # Bottom-up window
 ホストタスクの検査を続けるには、ボトムアップウィンドウに切り替えます。グループ化プルダウンメニューで、"Task Domain/Task Type/Function/Call Stack"のグループ化を選択します。
+![image](https://github.com/user-attachments/assets/3c047e66-ef35-4c7f-8a77-d1efc24b48fb)
+
 
 
 デバイスタスクが開始された瞬間からの実行を確認します。これは、タスクがコンピューティングキューに追加された瞬間です。
