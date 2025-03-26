@@ -99,9 +99,8 @@ vtune: Executing actions 100 % done
 
 # Bottom-up window
 ホストタスクの検査を続けるには、ボトムアップウィンドウに切り替えます。グループ化プルダウンメニューで、"Task Domain/Task Type/Function/Call Stack"のグループ化を選択します。
-![image](https://github.com/user-attachments/assets/3c047e66-ef35-4c7f-8a77-d1efc24b48fb)
 
-
+<img width="1580" alt="image" src="https://github.com/user-attachments/assets/48daf009-b89c-4393-a888-03730d419868" />
 
 デバイスタスクが開始された瞬間からの実行を確認します。これは、タスクがコンピューティングキューに追加された瞬間です。
 コンピューティングキューセクションでは、点線の上のグラフ部分がタスクがNPUで実行された期間を示します。
