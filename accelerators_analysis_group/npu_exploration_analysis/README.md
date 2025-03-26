@@ -6,6 +6,24 @@ sudo apt-get install opencl-headers
 Building a standalone driver: https://github.com/intel/linux-npu-driver/blob/main/docs/overview.md
 
 
+```
+cd linux-npu-driver
+git submodule update --init --recursive
+
+cmake -B build -S . -DENABLE_NPU_COMPILER_BUILD=ON
+cmake --build build --parallel $(nproc)
+
+# install the driver in the system
+sudo cmake --install build
+
+# reload the intel_vpu module to load new firmware
+sudo rmmod intel_vpu
+sudo modprobe intel_vpu
+
+export LD_LIBRARY_PATH=<path/to/build>/linux-npu-driver_openvino2024/build/lib:$LD_LIBRARY_PATH
+```
+
+
 ## NPUデータ収集モード
 Intel® VTune™ ProfilerはNPUのパフォーマンスに関するハードウェアメトリクスを次の2つの方法で収集できます：
 - **Time-based mode**  
