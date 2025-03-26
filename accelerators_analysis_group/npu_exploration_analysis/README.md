@@ -38,7 +38,7 @@ Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOC�
 
 # 使い方(windows only)
 ```
-vtune --collect npu -- C:\Users\MTL\Documents\Intel\OpenVINO\openvino_cpp_samples_build\intel64\Release\benchmark_app.exe -m classification.xml -d NPU
+vtune --collect npu -- openvino_cpp_samples_build\intel64\Release\benchmark_app.exe -m classification.xml -d NPU
 ```
 
 ```
