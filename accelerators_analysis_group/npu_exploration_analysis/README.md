@@ -13,4 +13,10 @@ Intel Neural Processing Units（NPU）上のAIまたはMLワークロードの�
 Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOCメトリックセットデータを収集します。
 データ収集が完了すると、Intel® VTune™ Profilerは結果を準備し、サマリウィンドウに表示します
 
-## 使い方(windows only)
+# 使い方(windows only)
+
+
+# Summary
+サマリウィンドウには、次のセクションから始まるNPUパフォーマンスデータが表示されます
+- NPUデバイス負荷 - このセクションは、NPUとDDRメモリ間で転送されたデータ量を示します。
+- NPUトップ計算タスク - このセクションは、タスクがNPU上で実行された総時間を記録します。
