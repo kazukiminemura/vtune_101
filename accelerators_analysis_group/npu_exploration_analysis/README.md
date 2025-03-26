@@ -3,9 +3,9 @@
 
 ## NPUデータ収集モード
 Intel® VTune™ ProfilerはNPUのパフォーマンスに関するハードウェアメトリクスを次の2つの方法で収集できます：
-- **Time-based mode**:
+- **Time-based mode**  
 より大きなワークロードに使用します。合理的な効率と低減されたオーバーヘッドでアプリケーションを最適化します。
-- **Query-based mode**:
+- **Query-based mode**  
 より小さなワークロードに使用します。実行時間が長くなっても、アプリケーションをより効率的に最適化します。ワークロードがDDRメモリに依存している場合に効果的に検査します。
 
 ## NPU探索ビュー
@@ -16,7 +16,10 @@ Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOC�
 # 使い方(windows only)
 
 
-# Summary
+# Summary window
 サマリウィンドウには、次のセクションから始まるNPUパフォーマンスデータが表示されます
 - NPUデバイス負荷 - このセクションは、NPUとDDRメモリ間で転送されたデータ量を示します。
 - NPUトップ計算タスク - このセクションは、タスクがNPU上で実行された総時間を記録します。
+
+# Bottom-up window
+ホストタスクの検査を続けるには、ボトムアップウィンドウに切り替えます。グループ化プルダウンメニューで、"Task Domain/Task Type/Function/Call Stack"のグループ化を選択します。
