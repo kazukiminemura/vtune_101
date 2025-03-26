@@ -8,4 +8,8 @@ NPU探索分析を実行すると、Intel® VTune™ ProfilerはNPUのパフォ�
 - **Query-based mode**:
 より小さなワークロードに使用します。実行時間が長くなっても、アプリケーションをより効率的に最適化します。ワークロードがDDRメモリに依存している場合に効果的に検査します。
 
+## NPU探索ビュー
+NPU探索ビューを使用して、Intel Neural Processing Units（NPU）上のAIまたはMLワークロードのパフォーマンスを評価および最適化します。
+NPU探索分析が実行されると、Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOCメトリックセットデータを収集します。データ収集が完了すると、Intel® VTune™ Profilerは結果を準備し、サマリウィンドウに表示します
+
 ## 使い方(windows only)
