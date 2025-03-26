@@ -2,14 +2,15 @@
 ニューラルプロセッシングユニット（NPU）は、オペレーティングシステムによって明示的にオフロードされたAIワークロードのパフォーマンスを加速することができます。NPUは、AIおよび機械学習（ML）ワークロードのパフォーマンスを向上させるために特別に設計されています。Intel® Distribution of OpenVINO™ツールキットを使用して、人気のあるMLモデル（音声認識や画像認識タスクなど）をIntel NPUにオフロードします。その後、NPUエクスプロレーション分析を使用してAIをプロファイルします。
 
 ## NPUデータ収集モード
-NPU探索分析を実行すると、Intel® VTune™ ProfilerはNPUのパフォーマンスに関するハードウェアメトリクスを次の2つの方法で収集できます：
+Intel® VTune™ ProfilerはNPUのパフォーマンスに関するハードウェアメトリクスを次の2つの方法で収集できます：
 - **Time-based mode**:
 より大きなワークロードに使用します。合理的な効率と低減されたオーバーヘッドでアプリケーションを最適化します。
 - **Query-based mode**:
 より小さなワークロードに使用します。実行時間が長くなっても、アプリケーションをより効率的に最適化します。ワークロードがDDRメモリに依存している場合に効果的に検査します。
 
 ## NPU探索ビュー
-NPU探索ビューを使用して、Intel Neural Processing Units（NPU）上のAIまたはMLワークロードのパフォーマンスを評価および最適化します。
-NPU探索分析が実行されると、Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOCメトリックセットデータを収集します。データ収集が完了すると、Intel® VTune™ Profilerは結果を準備し、サマリウィンドウに表示します
+Intel Neural Processing Units（NPU）上のAIまたはMLワークロードのパフォーマンスを評価および最適化します。
+Intel® VTune™ ProfilerはNPUとDDRメモリ間のDDR帯域幅に関するNOCメトリックセットデータを収集します。
+データ収集が完了すると、Intel® VTune™ Profilerは結果を準備し、サマリウィンドウに表示します
 
 ## 使い方(windows only)
