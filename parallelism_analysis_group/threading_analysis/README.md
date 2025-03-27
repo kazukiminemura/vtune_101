@@ -37,7 +37,7 @@ image
 
 ## 使い方
 ```
-vtune --collect threading -- ./a.out
+vtune --collect threading -knob sampling-and-waits=hw -- ./a.out
 ```
 
 **結果**
