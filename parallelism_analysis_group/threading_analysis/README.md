@@ -35,11 +35,71 @@ image
 
 ## 使い方
 ```
-test
+vtune --collect threading -- ./a.out
 ```
 
+**結果**
 ```
-output
+Generating a report                              Elapsed Time: 71.355s
+    Paused Time: 0s
+Effective CPU Utilization: 1.7% (0.368 out of 22 logical CPUs)
+ | The metric value is low, which may signal a poor logical CPU cores
+ | utilization caused by load imbalance, threading runtime overhead, contended
+ | synchronization, or thread/process underutilization. Explore sub-metrics to
+ | estimate the efficiency of MPI and OpenMP parallelism or run the Locks and
+ | Waits analysis to identify parallel bottlenecks for other parallel runtimes.
+ |
+    Total Thread Count: 3
+     | The number of threads in the application is significantly lower than the
+     | number of logical cores on the machine. Check if it is resulted by thread
+     | number hard coding that limits application scalability.
+     |
+        Thread Oversubscription: 0s (0.0% of CPU Time)
+    Wait Time with poor CPU Utilization: 73.099s (100.0% of Wait Time)
+
+        Top Waiting Objects
+        Sync Object                                                                  Wait Time with poor CPU Utilization  (% from Object Wait Time)(%)  Wait Count
+        ---------------------------------------------------------------------------  -----------------------------------  ----------------------------  ----------
+        Condition Variable 0xebb26ecd                                                                            69.632s                        100.0%           1
+        Condition Variable 0xadf5b51e                                                                             3.464s                        100.0%         601
+        Stream 0xb9d7d680                                                                                         0.002s                        100.0%          17
+        Stream /root/.cache/neo_compiler_cache/e717b37fe19fe188.l0_cache 0xaaace988                               0.001s                        100.0%           2
+        Stream /opt/intel/oneapi/compiler/2025.1/lib/sycl.conf 0x0874af66                                         0.000s                        100.0%           1
+        [Others]                                                                                                  0.001s                        100.0%          35
+    Spin and Overhead Time: 45.031s (63.2% of CPU Time)
+     | A significant portion of CPU time is spent waiting. Use this metric to
+     | discover which synchronizations are spinning. Consider adjusting spin
+     | wait parameters, changing the lock implementation (for example, by
+     | backing off then descheduling), or adjusting the synchronization
+     | granularity.
+     |
+
+        Top Functions with Spin or Overhead Time
+        Function       Module                Spin and Overhead Time  (% from CPU Time)(%)
+        -------------  --------------------  ----------------------  --------------------
+        func@0x1889a0  libze_intel_gpu.so.1                 45.031s                 63.2%
+Collection and Platform Info
+    Application Command Line: ./a.out
+    Operating System: 6.11.0-19-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=24.04 DISTRIB_CODENAME=noble DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+    Computer Name: intel-Alienware-m16-R2
+    Result Size: 10.8 MB
+    Collection start time: 14:09:26 27/03/2025 UTC
+    Collection stop time: 14:10:38 27/03/2025 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Intel(R) microarchitecture code named Meteorlake-P
+        Frequency: 2.995 GHz
+        Logical CPU Count: 22
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: not detected
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % done
+
 ```
 
 ## GUI
