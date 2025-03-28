@@ -277,7 +277,7 @@ GPUスレッドのスケジューリング効率を測定します。占有率�
 プロセス/スレッドアフィニティを確認できるHTMLプレビューが利用可能で、スレッドのCPU実行とリモートアクセスも併せて表示されます。以下のコマンドを使用してプレビューHTMLレポートを生成してください。
 
 ```
-ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hpc-performance -knob collect-affinity=true -- ./a.out
+ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hpc-performance -knob collect-affinity=true -- numactl --cpunodebind=0 --membind=0 ./a.out
 vtune -report affinity -format=html -r <result_dir>
 ```
 
