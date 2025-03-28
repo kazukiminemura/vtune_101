@@ -5,7 +5,7 @@
 HPCパフォーマンス特性分析は、アプリケーションのパフォーマンス面を理解するための出発点として使用できます。
 Intel OpenMP*またはIntel MPIランタイムライブラリを使用するアプリケーションには、追加のスケーラビリティメトリクスが利用可能です。
 
-image 
+<img width="505" alt="image" src="https://github.com/user-attachments/assets/3b9d27c0-0357-4d8f-9cfc-5fc0a2b94d26" />
 
 Intel® VTune™ Profilerデータコレクターはイベントベースのサンプリング収集を使用してアプリケーションをプロファイルします。
 Intel OpenMPランタイムライブラリのOpenMP分析メトリクスは、ランタイムライブラリで有効にされたユーザーAPI計測に基づいています。 
