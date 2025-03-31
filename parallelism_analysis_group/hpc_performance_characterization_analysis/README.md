@@ -282,7 +282,8 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hpc-performance -knob collect-
 vtune -report affinity -format=text -r <result_dir> > test.txt
 ```
 
-image
+![Uploading image.png…]()
+
 
 ## 他の解析タイプ使用
 - メモリアクセス解析を実行
