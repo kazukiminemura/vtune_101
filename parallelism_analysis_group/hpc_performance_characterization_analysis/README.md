@@ -273,12 +273,13 @@ GPUスレッドのスケジューリング効率を測定します。占有率�
 - VTune Profiler GUI内の「Collect thread affinity」オプション、またはコマンドラインで「-knob collect-affinity=true」を使用して、HPC性能特性分析のためのアフィニティ収集を有効化してください。このオプションを有効化すると、スレッドのソケット、物理コア、論理コアへの固定を示すスレッドアフィニティのコマンドラインレポートを生成できます。
 - アフィニティ情報はスレッドのライフタイム終了時に収集されるため、スレッドライフタイム中に変更される動的アフィニティの全問題を反映できない場合があります。
 
-**プレビューHTMLレポート**
-プロセス/スレッドアフィニティを確認できるHTMLプレビューが利用可能で、スレッドのCPU実行とリモートアクセスも併せて表示されます。以下のコマンドを使用してプレビューHTMLレポートを生成してください。
+~~**プレビューHTMLレポート**~~
+~~プロセス/スレッドアフィニティを確認できるHTMLプレビューが利用可能で、スレッドのCPU実行とリモートアクセスも併せて表示されます。以下のコマンドを使用してプレビューHTMLレポートを生成してください。~~
 
 ```
 ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hpc-performance -knob collect-affinity=true -- numactl --cpunodebind=0 --membind=0 ./a.out
-vtune -report affinity -format=html -r <result_dir>
+~~vtune -report affinity -format=html -r <result_dir>~~
+vtune -report affinity -format=text -r <result_dir> > test.txt
 ```
 
 image
