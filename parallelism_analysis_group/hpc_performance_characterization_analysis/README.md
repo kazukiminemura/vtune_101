@@ -282,7 +282,8 @@ ONEAPI_DEVICE_SELECTOR=opencl:cpu vtune --collect hpc-performance -knob collect-
 vtune -report affinity -format=text -r <result_dir> > test.txt
 ```
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/49e405cc-78da-409a-994a-29ad7ad7fab0)
+
 
 
 ## 他の解析タイプ使用
