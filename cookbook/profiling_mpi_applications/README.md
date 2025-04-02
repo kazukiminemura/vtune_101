@@ -164,5 +164,12 @@ Graphical representation of this data is available in the HTML report: /home/int
 ```
 
 # HTML
+aps_report_YYYYMMDD_<stamp>.html ファイルは、作業ディレクトリに作成されます。    
+<stamp> 番号は既存のレポートを上書きしないように使用されます。レポートには、以下の情報が含まれます：
+- MPI と OpenMP* の不均衡
+- メモリフットプリントと物理コアの利用率
+- 浮動小数点スループット
+- レポートの上部には、アプリケーションの主要な懸念事項が強調されています。
+
 <img width="1915" alt="image" src="https://github.com/user-attachments/assets/24cfdae3-2a32-48e0-8e98-fa3d95883527" />
 
