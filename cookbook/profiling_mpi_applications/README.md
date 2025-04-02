@@ -1,5 +1,5 @@
 # MPIアプリケーションのプロファイリング
-アプリケーション: [https://github.com/AlexeyMalkhanov/Cardiac_demo](heart_demo) サンプルアプリケーション
+アプリケーション: [a link](#https://github.com/AlexeyMalkhanov/Cardiac_demo) サンプルアプリケーション
 ツール:
 - Intel® C++ コンパイラ
 - Intel® MPI ライブラリ 2021.11
