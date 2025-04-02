@@ -162,3 +162,7 @@ aps --report <aps_result>
 
 Graphical representation of this data is available in the HTML report: /home/intel/projects/Cardiac_demo/build/aps_report_20250402_171940.html
 ```
+
+# HTML
+<img width="1915" alt="image" src="https://github.com/user-attachments/assets/24cfdae3-2a32-48e0-8e98-fa3d95883527" />
+
