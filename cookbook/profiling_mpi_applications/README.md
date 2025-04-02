@@ -260,7 +260,6 @@ vtune-gui ./vtune_mpi.<node_name>
 
 <img width="958" alt="image" src="https://github.com/user-attachments/assets/7d350760-da0f-49ea-8d24-36ab651a2f9f" />
 
-スピンとオーバーヘッドの量が多いこと（デフォルトで赤色で表示）が目立ちます。これは、アプリケーションのスレッド実装方法に問題があることを示しています。
 以下の手順で詳細な分析を行ってください：
 - 「Bottom-up」ウィンドウの上部で、データを OpenMP Region / Thread / Function / Call Stack の順にグループ化します。
 - ウィンドウ下部にあるフィルターを適用して、Functionsのみを表示します。
