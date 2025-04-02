@@ -205,5 +205,5 @@ export OMP_NUM_THREADS=12
 mpirun -np 16 -ppn 4 vtune -collect hpc-performance -r vtune_mpi -- ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100\
 ```
 3. **分析の開始**    
-分析が開始され、以下の命名規則を使用して4つの出力ディレクトリが生成されます
+分析が開始され、以下の命名規則を使用して4つの出力ディレクトリが生成されます    
     vtune_mpi.<node host name>
