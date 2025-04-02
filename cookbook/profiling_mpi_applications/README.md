@@ -190,12 +190,11 @@ MPI時間セクションには、MPIの不均衡や使用される主要なMPI�
 ```
 
 VTune ProfilerのコマンドラインからHPCパフォーマンス特性分析を実行する手順は以下の通りです:    
-1 **環境の準備:**    
+1. **環境の準備:**    
 VTune Profilerファイルをソースして環境を準備します。bashシェルを使用したデフォルトインストールの場合、以下のコマンドを使用します：
 ```
 source /opt/intel/vtune_Profiler/vars.sh
 ```
-
 2. **データの収集**    
 heart_demoアプリケーションのhpc-performance分析を使用してデータを収集します。
 このアプリケーションはOpenMPとMPIの両方を使用します。
@@ -205,6 +204,5 @@ heart_demoアプリケーションのhpc-performance分析を使用してデー�
 export OMP_NUM_THREADS=12
 mpirun -np 16 -ppn 4 vtune -collect hpc-performance -r vtune_mpi -- ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100\
 ```
-
-4. **分析の開始**
+3. **分析の開始**
 分析が開始され、以下の命名規則を使用して4つの出力ディレクトリが生成されます：vtune_mpi.<node host name>。
