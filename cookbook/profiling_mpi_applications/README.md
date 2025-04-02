@@ -231,3 +231,26 @@ vtune-gui ./vtune_mpi.<node_name>
 <img width="817" alt="image" src="https://github.com/user-attachments/assets/6597cde9-849f-4919-b58b-da08b903b59b" />
 
 
+"Bottom-up"タブに切り替えることで、さらに詳細な情報を確認できます。グルーピングを"Process"に設定してください。すると、このようなビューが表示されるはずです
+
+<img width="1048" alt="image" src="https://github.com/user-attachments/assets/19c4b469-c7af-442e-8207-b083f90c352f" />
+
+このコードではMPIとOpenMPの両方が使用されているため、"Bottom-up"ウィンドウにはCPUおよびメモリデータに加えて、両ランタイムに関連するメトリクスが表示されます。今回の例では、OpenMP*不均衡メトリクスが赤く強調表示されています。これは、スレッド化の改善がパフォーマンス向上に寄与する可能性を示唆しています。    
+
+また、"Bottom-up"ウィンドウの下部にある実行タイムラインを確認し、DDRおよびMCDRAMの帯域幅、CPU時間などの複数のメトリクスをレビューしてください。このコードのDRAM帯域幅タイムラインは、中程度の帯域幅で連続的な利用率を示しています（スケールはGB/s単位）。
+
+<img width="905" alt="image" src="https://github.com/user-attachments/assets/9eb1a67b-a4c2-4adf-9780-2ae369f52370" />
+
+詳細なスレッドごとの実行時間と以下のメトリクスの内訳が重要です
+- 有効時間 (Effective Time)
+- スピンとオーバーヘッド時間 (Spin and Overhead Time)
+- MPIビジーウェイト時間 (MPI Busy Wait Times)
+デフォルトビューでは、Super Tiny設定が使用され、すべてのプロセスとスレッドが一緒に、パフォーマンスの視覚的なマップとして表示されます。
+
+![image](https://github.com/user-attachments/assets/b220368f-728f-4cdd-8cd4-74fc040bf14a)
+
+
+
+
+
+
