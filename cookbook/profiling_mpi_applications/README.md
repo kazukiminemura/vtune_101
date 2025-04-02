@@ -189,7 +189,7 @@ MPI時間セクションには、MPIの不均衡や使用される主要なMPI�
 <mpi launcher> [options] vtune [options] -r <results dir> -- <application> [arguments]
 ```
 
-VTune ProfilerのコマンドラインからHPCパフォーマンス特性分析を実行する手順は以下の通りです
+VTune ProfilerのコマンドラインからHPCパフォーマンス特性分析を実行する手順は以下の通りです:    
 1 **環境の準備:**    
 VTune Profilerファイルをソースして環境を準備します。bashシェルを使用したデフォルトインストールの場合、以下のコマンドを使用します：
 ```
