@@ -7,7 +7,7 @@
 - Intel VTune Profiler - Application Performance Snapshot
 最新バージョンの VTune Profiler は、製品ダウンロードページからダウンロードしてください。 オペレーティングシステム: Linux*
 
-CPU: Intel® Xeon® Platinum 8480+ プロセッサ（コードネーム：Sapphire Rapids）
+CPU: Intel(R) Core(TM) Ultra 7 155H
 
 # 使い方
 **ビルド**
