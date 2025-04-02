@@ -206,10 +206,10 @@ mpirun -np 16 -ppn 4 vtune -collect hpc-performance -r vtune_mpi -- ./heart_demo
 ```
 3. **分析の開始**    
 分析が開始され、以下の命名規則を使用して4つの出力ディレクトリが生成されます    
-    vtune_mpi.<node host name>
+    vtune_mpi.<node name>
 
 ## Intel VTune Profiler GUI
 収集された結果の1つをVTune Profilerユーザーインターフェースで開きます    
 ```
-vtune-gui ./vtune_mpi.node_1
+vtune-gui ./vtune_mpi.<node name>
 ```
