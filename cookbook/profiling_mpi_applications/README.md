@@ -201,8 +201,9 @@ heart_demoアプリケーションのhpc-performance分析を使用してデー�
 アプリケーションの実行は、前述の構成を使用し、Intel® MPIライブラリを使用して4つの計算ノードにわたって16のMPIランクを使用します。
 各MPIランクに4のOpenMPスレッドを使用します
 ```
-export OMP_NUM_THREADS=4
-mpirun -np 16 -ppn 4 vtune -collect hpc-performance -r vtune_mpi -- ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100
+export OMP_NUM_THREADS=5
+export I_MPI_PIN=1
+mpirun -np 4 -ppn 1 vtune -collect hpc-performance -r vtune_mpi -- ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100
 ```
 3. **分析の開始**    
 分析が開始され、以下の命名規則を使用して4つの出力ディレクトリが生成されます    
