@@ -1,4 +1,4 @@
-# MPIアプリケーションのプロファイリング
+<img width="889" alt="image" src="https://github.com/user-attachments/assets/01b6c29b-e131-4da1-80a8-caa4a09f6571" /># MPIアプリケーションのプロファイリング
 サンプルアプリケーション: [heart_demo](https://github.com/AlexeyMalkhanov/Cardiac_demo)    
 ツール:
 - Intel® C++ コンパイラ
@@ -235,13 +235,14 @@ vtune-gui ./vtune_mpi.<node_name>
 
 "Bottom-up"タブに切り替えることで、さらに詳細な情報を確認できます。グルーピングを"Process"に設定してください。すると、このようなビューが表示されるはずです
 
-<img width="1048" alt="image" src="https://github.com/user-attachments/assets/19c4b469-c7af-442e-8207-b083f90c352f" />
+<img width="1028" alt="image" src="https://github.com/user-attachments/assets/a509fc5d-6535-42e3-8443-a997c77017b3" />
+
 
 このコードではMPIとOpenMPの両方が使用されているため、"Bottom-up"ウィンドウにはCPUおよびメモリデータに加えて、両ランタイムに関連するメトリクスが表示されます。今回の例では、OpenMP*不均衡メトリクスが赤く強調表示されています。これは、スレッド化の改善がパフォーマンス向上に寄与する可能性を示唆しています。    
 
 また、"Bottom-up"ウィンドウの下部にある実行タイムラインを確認し、DDRおよびMCDRAMの帯域幅、CPU時間などの複数のメトリクスをレビューしてください。このコードのDRAM帯域幅タイムラインは、中程度の帯域幅で連続的な利用率を示しています（スケールはGB/s単位）。
 
-<img width="905" alt="image" src="https://github.com/user-attachments/assets/9eb1a67b-a4c2-4adf-9780-2ae369f52370" />
+<img width="889" alt="image" src="https://github.com/user-attachments/assets/6bca4066-857c-439e-bc5f-6851bbb29645" />
 
 詳細なスレッドごとの実行時間と以下のメトリクスの内訳が重要です
 - 有効時間 (Effective Time)
@@ -249,7 +250,7 @@ vtune-gui ./vtune_mpi.<node_name>
 - MPIビジーウェイト時間 (MPI Busy Wait Times)
 デフォルトビューでは、Super Tiny設定が使用され、すべてのプロセスとスレッドが一緒に、パフォーマンスの視覚的なマップとして表示されます。
 
-![image](https://github.com/user-attachments/assets/b220368f-728f-4cdd-8cd4-74fc040bf14a)
+<img width="1027" alt="image" src="https://github.com/user-attachments/assets/606637a2-b9e2-4b56-b6a2-9e7655ce5fab" />
 
 この場合、大部分のスレッドで有効時間（緑色）が少なく、MPIオーバーヘッド（黄色）も小さいことが確認できるはずです。これは、スレッド実装に潜在的な問題がある可能性を示しています。
 詳細な調査を進めるには、以下の手順を行ってください：
@@ -260,7 +261,7 @@ vtune-gui ./vtune_mpi.<node_name>
 このグループ化により、各MPIランクと各スレッドの役割を明確に把握できます。各プロセスの上部バーにはすべての子スレッドの平均結果が表示され、その下に各スレッドがスレッド番号とプロセスIDとともに一覧表示されます。
 今回の例では、主スレッドが各MPIランクのすべてのMPI通信を担当しています。この動作はハイブリッドアプリケーションでは一般的です。実行開始から最初の0.5秒間は、問題のセットアップやデータの分散のためにMPI通信（黄色）に多くの時間が費やされています。その後は定期的なMPI通信が行われており、これは帯域幅利用率のタイムラインやサマリーレポートで観察された結果と一致します。
 
-<img width="958" alt="image" src="https://github.com/user-attachments/assets/7d350760-da0f-49ea-8d24-36ab651a2f9f" />
+<img width="1029" alt="image" src="https://github.com/user-attachments/assets/5f6ca84d-8227-48f0-86a8-5013aef2ad4b" />
 
 以下の手順で詳細な分析を行ってください：
 - 「Bottom-up」ウィンドウの上部で、データを OpenMP Region / Thread / Function / Call Stack の順にグループ化します。
