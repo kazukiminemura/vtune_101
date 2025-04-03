@@ -223,7 +223,8 @@ vtune-gui ./vtune_mpi.<node_name>
 マルチノード実行でクリティカルパスのランクにおける著しいMPIビジーウェイト時間は、異常なランクが別のノードにある可能性を示す場合があります。    
 今回の例では、一部の不均衡があり、コードのシリアル領域でかなりの時間が費やされています（図には示されていません）。    
 
-<img width="820" alt="image" src="https://github.com/user-attachments/assets/aac5e682-d265-4b73-9fd4-0b1ed0ec2859" />
+<img width="1025" alt="image" src="https://github.com/user-attachments/assets/ee726031-7caf-423d-ac27-53cd3987d264" />
+
 
 ノード間でプロファイルを収集することは可能ですが、すべてのMPIデータを表示する唯一の方法は、各ノードの結果を個別にロードすることです。    
 詳細なMPIトレースには、Intel® Trace Analyzer and Collector を使用してください。Intel VTune Profiler 2024.0（およびそれ以降のバージョン）では、Summary ウィンドウに帯域幅利用率のヒストグラムが含まれています。このメトリクスは、帯域幅とパケットレートを示し、コードが高い帯域幅またはパケットレート利用率によって束縛されていた実行時間の割合を示します。ヒストグラムには最大DRAM帯域幅利用率が38GB/sであることが示されていますが、これは中程度の利用率です。これにより、改善の余地がまだあることが分かります。
