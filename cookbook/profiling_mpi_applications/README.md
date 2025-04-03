@@ -29,8 +29,8 @@ mpiicpx ../heart_demo.cpp ../luo_rudy_1991.cpp ../rcm.cpp ../mesh.cpp -g -o hear
 
 **実行**
 ```
-export OMP_NUM_THREADS=4
-mpirun -np 16 -ppn 4 aps ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100
+export OMP_NUM_THREADS=7
+mpirun -np 5 -ppn 1 aps ./heart_demo -m ../mesh_mid -s ../setup_mid.txt -t 100
 aps --report <aps_result>
 ```
 
