@@ -227,9 +227,10 @@ vtune-gui ./vtune_mpi.<node_name>
 
 
 ノード間でプロファイルを収集することは可能ですが、すべてのMPIデータを表示する唯一の方法は、各ノードの結果を個別にロードすることです。    
-詳細なMPIトレースには、Intel® Trace Analyzer and Collector を使用してください。Intel VTune Profiler 2024.0（およびそれ以降のバージョン）では、Summary ウィンドウに帯域幅利用率のヒストグラムが含まれています。このメトリクスは、帯域幅とパケットレートを示し、コードが高い帯域幅またはパケットレート利用率によって束縛されていた実行時間の割合を示します。ヒストグラムには最大DRAM帯域幅利用率が38GB/sであることが示されていますが、これは中程度の利用率です。これにより、改善の余地がまだあることが分かります。
+詳細なMPIトレースには、Intel® Trace Analyzer and Collector を使用してください。Intel VTune Profiler 2024.0（およびそれ以降のバージョン）では、Summary ウィンドウに帯域幅利用率のヒストグラムが含まれています。このメトリクスは、帯域幅とパケットレートを示し、コードが高い帯域幅またはパケットレート利用率によって束縛されていた実行時間の割合を示します。ヒストグラムには最大DRAM帯域幅利用率が42GB/sであることが示されていますが、これは中程度の利用率です。これにより、改善の余地がまだあることが分かります。
 
-<img width="817" alt="image" src="https://github.com/user-attachments/assets/6597cde9-849f-4919-b58b-da08b903b59b" />
+<img width="1025" alt="image" src="https://github.com/user-attachments/assets/67b7b598-9d72-4b2f-ae50-fac43608e31d" />
+
 
 
 "Bottom-up"タブに切り替えることで、さらに詳細な情報を確認できます。グルーピングを"Process"に設定してください。すると、このようなビューが表示されるはずです
