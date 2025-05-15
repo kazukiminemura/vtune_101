@@ -6,12 +6,46 @@ vtune --collect memory-access -- ./a.out
 
 # プロファイル結果 1GB with 112 threads (9.3MB per threads)
 25.6％のCPUがL3にデータがないためストール
-<img width="401" alt="image" src="https://github.com/user-attachments/assets/30784da2-6e4b-4398-966e-f6e268693224" />
+
+```
+Elapsed Time:	0.989s
+    CPU Time:	5.885s
+    Memory Bound:	78.3%
+    L1 Bound:	3.1%
+    L2 Bound:	1.5%
+    L3 Bound:	25.6%
+    DRAM Bound:	30.7%
+    Store Bound:	14.1%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	14,850,422
+    Stores:	196,880,599
+    LLC Miss Count:	0
+    Total Thread Count:	114
+    Paused Time:	0s
+```
 
 
 # プロファイル結果 100MB with 112 threads (0.9MB per threads)
 ストールなし
-![image](https://github.com/user-attachments/assets/4bc00414-2287-4207-ac31-79186985f455)
+```
+Elapsed Time:	0.108s
+    CPU Time:	0.130s
+    Memory Bound:	43.9%
+    L1 Bound:	0.0%
+    L2 Bound:	0.0%
+    L3 Bound:	0.0%
+    DRAM Bound:	0.0%
+    Store Bound:	67.6%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	7,000,210
+    Stores:	29,500,850
+    LLC Miss Count:	0
+    Total Thread Count:	113
+    Paused Time:	0s
+
+```
 
 
 
