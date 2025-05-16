@@ -51,6 +51,43 @@ Elapsed Time:	0.108s
     Paused Time:	0s
 ```
 
+# プロファイル結果 100MB with 112 threads (1.33MB per threads)
+```
+Elapsed Time:	0.203s
+    CPU Time:	0.520s
+    Memory Bound:	44.4%
+    L1 Bound:	0.0%
+    L2 Bound:	14.1%
+    L3 Bound:	14.1%
+    DRAM Bound:	9.4%
+    Store Bound:	34.5%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	20,413,102
+    Stores:	72,889,614
+    LLC Miss Count:	0
+    Total Thread Count:	113
+    Paused Time:	0s
+```
+
+# プロファイル結果 200MB with 112 threads (1.8MB per threads)
+```
+Elapsed Time:	0.207s
+    CPU Time:	0.555s
+    Memory Bound:	27.6%
+    L1 Bound:	0.0%
+    L2 Bound:	13.9%
+    L3 Bound:	18.5%
+    DRAM Bound:	27.8%
+    Store Bound:	33.9%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	7,000,210
+    Stores:	65,889,404
+    LLC Miss Count:	0
+    Total Thread Count:	113
+    Paused Time:	0s
+```
 
 # 1GB配列操作時の考察
 1. L3キャッシュミスとDRAMアクセス
