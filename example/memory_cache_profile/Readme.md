@@ -52,6 +52,26 @@ Elapsed Time:	0.038s
     Paused Time:	0s
 ```
 
+# プロファイル結果 200MB with 112 threads (1.8MB per threads)
+ストールなし
+```
+Elapsed Time:	0.057s
+    CPU Time:	0.050s
+    Memory Bound:	100.0%
+    L1 Bound:	0.0%
+    L2 Bound:	0.0%
+    L3 Bound:	0.0%
+    DRAM Bound:	0.0%
+    Store Bound:	78.9%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	0
+    Stores:	0
+    LLC Miss Count:	0
+    Total Thread Count:	114
+    Paused Time:	0s
+```
+
 # 1GB配列操作時の考察
 1. L3キャッシュミスとDRAMアクセス
 L3 Bound 25.6%：L3キャッシュにデータがないため、CPUが待たされている。
