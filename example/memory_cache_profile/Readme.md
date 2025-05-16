@@ -51,6 +51,46 @@ Elapsed Time:	0.108s
     Paused Time:	0s
 ```
 
+# プロファイル結果 120MB with 112 threads (1.07MB per threads)
+ストールなし
+```
+Elapsed Time:	0.132s
+    CPU Time:	0.170s
+    Memory Bound:	54.3%
+    L1 Bound:	0.0%
+    L2 Bound:	0.0%
+    L3 Bound:	0.0%
+    DRAM Bound:	0.0%
+    Store Bound:	49.7%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	7,000,210
+    Stores:	41,751,210
+    LLC Miss Count:	0
+    Total Thread Count:	114
+    Paused Time:	0s
+```
+
+# プロファイル結果 130MB with 112 threads (1.16MB per threads)
+L3ストール
+```
+Elapsed Time:	0.140s
+    CPU Time:	0.205s
+    Memory Bound:	45.5%
+    L1 Bound:	0.0%
+    L2 Bound:	0.0%
+    L3 Bound:	22.5%
+    DRAM Bound:	0.0%
+    Store Bound:	47.1%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	0
+    Stores:	23,400,664
+    LLC Miss Count:	0
+    Total Thread Count:	114
+    Paused Time:	0s
+```
+
 # プロファイル結果 150MB with 112 threads (1.33MB per threads)
 ```
 Elapsed Time:	0.203s
