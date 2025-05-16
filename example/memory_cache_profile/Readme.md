@@ -51,7 +51,7 @@ Elapsed Time:	0.108s
     Paused Time:	0s
 ```
 
-# プロファイル結果 100MB with 112 threads (1.33MB per threads)
+# プロファイル結果 150MB with 112 threads (1.33MB per threads)
 ```
 Elapsed Time:	0.203s
     CPU Time:	0.520s
