@@ -74,18 +74,18 @@ Elapsed Time:	0.132s
 # プロファイル結果 130MB with 112 threads (1.16MB per threads)
 L3ストール
 ```
-Elapsed Time:	0.140s
-    CPU Time:	0.205s
-    Memory Bound:	45.5%
+Elapsed Time:	0.136s
+    CPU Time:	0.190s
+    Memory Bound:	100.0%
     L1 Bound:	0.0%
     L2 Bound:	0.0%
-    L3 Bound:	22.5%
+    L3 Bound:	23.9%
     DRAM Bound:	0.0%
-    Store Bound:	47.1%
+    Store Bound:	48.7%
     NUMA: % of Remote Accesses:	0.0%
     UPI Utilization Bound:	0.0%
-    Loads:	0
-    Stores:	23,400,664
+    Loads:	7,000,210
+    Stores:	29,800,858
     LLC Miss Count:	0
     Total Thread Count:	114
     Paused Time:	0s
