@@ -6,11 +6,34 @@
 # 使い方
 ```
 icpx bandwith_cache_test.cpp
-vtune --collect memory-access -- ./a.out
+vtune -collect memory-access -- ./a.out
+vtune -collect memory-access -start-paused -resume-after=0.12 -- ./a.out
 ```
 
 # プロファイル結果 1GB with 112 threads (9.3MB per threads)
-37.2％のCPUがL1にデータがないためストール
+19.4％のCPUがL3にデータがないためストール
+```
+Elapsed Time:	0.208s
+    CPU Time:	0.230s
+    Memory Bound:	100.0%
+    L1 Bound:	58.3%
+    L2 Bound:	0.0%
+    L3 Bound:	19.4%
+    DRAM Bound:	58.3%
+    DRAM Bandwidth Bound:	22.8%
+    Store Bound:	0.0%
+    NUMA: % of Remote Accesses:	0.0%
+    UPI Utilization Bound:	0.0%
+    Loads:	0
+    Stores:	0
+    LLC Miss Count:	0
+    Total Thread Count:	114
+    Paused Time:	0.120s
+```
+
+
+# プロファイル結果 100MB with 112 threads (0.9MB per threads)
+ストールなし
 ```
 Elapsed Time:	0.038s
     CPU Time:	0.025s
@@ -24,27 +47,6 @@ Elapsed Time:	0.038s
     UPI Utilization Bound:	0.0%
     Loads:	0
     Stores:	0
-    LLC Miss Count:	0
-    Total Thread Count:	113
-    Paused Time:	0s
-```
-
-
-# プロファイル結果 100MB with 112 threads (0.9MB per threads)
-ストールなし
-```
-Elapsed Time:	0.108s
-    CPU Time:	0.130s
-    Memory Bound:	43.9%
-    L1 Bound:	0.0%
-    L2 Bound:	0.0%
-    L3 Bound:	0.0%
-    DRAM Bound:	0.0%
-    Store Bound:	67.6%
-    NUMA: % of Remote Accesses:	0.0%
-    UPI Utilization Bound:	0.0%
-    Loads:	7,000,210
-    Stores:	29,500,850
     LLC Miss Count:	0
     Total Thread Count:	113
     Paused Time:	0s
