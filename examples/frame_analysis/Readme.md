@@ -17,3 +17,6 @@ icpx -fsycl sycl_itt.cpp -o sycl_itt.exe -llibittnotify
 ```
 vtune --collect hotspots -- sycl_itt
 ```
+
+
+![image](https://github.com/user-attachments/assets/dbc88fce-8b71-409c-b347-41f7efd29a25)
